@@ -34,11 +34,3 @@ function bound() {
     sliderContainer.style.left = `-${cont_rect.width - slider_rect.width}px`;
   }
 }
-
-// slider.addEventListener("mouseenter", () => {
-//   slider.style.cursor = "grab";
-// });
-
-// window.addEventListener("mouseup", () => {
-//   active = false;
-// });
