@@ -700,6 +700,9 @@ ul li {
   height: 265px;
   position: relative;
   overflow-x: scroll;
+
+  scrollbar-width: auto;
+  scrollbar-color: var(--yellow) var(--dark-blue);
 }
 .recent .container .projects .projects-images .items {
   display: grid;
@@ -806,7 +809,7 @@ ul li {
 
 .recent .container .projects .projects-images::-webkit-scrollbar-track {
   background-color: transparent;
-  opacity: 0;
+  margin: 300px;
 }
 
 .recent .container .projects .projects-images::-webkit-scrollbar {
@@ -818,6 +821,10 @@ ul li {
   background-color: var(--light-yellow);
   border-radius: 10px;
 }
+.recent .container .projects .projects-images::-webkit-scrollbar-thumb:hover {
+  background-color: var(--yellow);
+}
+
 .recent .container .shipment {
   max-width: 1520px;
   margin: 0 auto;
@@ -979,6 +986,10 @@ ul li {
 @media screen and (max-width: 1280px) {
   .slider-container .slider .slide .content {
     font-size: 52px;
+  }
+  .recent .container .projects .projects-images::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin: 120px;
   }
 }
 @media screen and (max-width: 1180px) {
