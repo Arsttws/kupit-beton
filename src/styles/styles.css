@@ -81,10 +81,13 @@ ul li {
   color: var(--white);
   border-radius: 5px;
   background: var(--yellow);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 .call-to-action .call-button:hover {
-  background: var(--yellow-hover);
+  background: var(--white);
+  color: var(--yellow);
+  font-weight: 500;
+  outline: 1px solid var(--yellow);
 }
 .call-to-action .online-request {
   border: none;
@@ -100,7 +103,10 @@ ul li {
   transition: all 0.2s ease;
 }
 .call-to-action .online-request:hover {
-  background: var(--light-blue-btn-hover);
+  background: var(--white);
+  color: var(--light-blue);
+  outline: 1px solid var(--light-blue);
+  font-weight: 500;
 }
 
 /* =========================== slider =========================== */
@@ -223,6 +229,18 @@ ul li {
   margin-right: 0;
   margin-left: auto;
 }
+.buy-in-minsk .headline:hover h2::after {
+  animation-name: headlineUnderline30;
+  animation-duration: 1s;
+}
+@keyframes headlineUnderline30 {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 30%;
+  }
+}
 .buy-in-minsk .information {
   padding: 20px;
   display: grid;
@@ -235,6 +253,8 @@ ul li {
   max-width: 550px;
   width: 100%;
   object-fit: cover;
+  margin-left: auto;
+  margin-right: 0;
 }
 .buy-in-minsk .information .images img {
   width: 100%;
@@ -269,6 +289,7 @@ ul li {
 }
 .buy-in-minsk .information .text .call-to-action .phone-number:hover {
   color: var(--light-blue-hover);
+  text-decoration: underline;
 }
 
 /* =========================== buy-delivery =========================== */
@@ -295,6 +316,18 @@ ul li {
   height: 2px;
   margin-right: 0;
   margin-left: auto;
+}
+.buy-delivery .headline:hover h2::after {
+  animation-name: headlineUnderline24;
+  animation-duration: 1s;
+}
+@keyframes headlineUnderline24 {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 24%;
+  }
 }
 .buy-delivery .container .concrete .items {
   display: grid;
@@ -395,6 +428,18 @@ ul li {
   margin-right: 0;
   margin-left: auto;
 }
+.concrete-delivery .container .headline:hover h2::after {
+  animation-name: headlineUnderline33;
+  animation-duration: 1s;
+}
+@keyframes headlineUnderline33 {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 33%;
+  }
+}
 .concrete-delivery .container .headline p {
   font-size: 16px;
   text-align: right;
@@ -420,12 +465,20 @@ ul li {
 .concrete-delivery .container .advantages .items .item {
   padding: 20px 25px 25px;
   background: var(--dark-blue);
+  cursor: crosshair;
+}
+.concrete-delivery .container .advantages .items .item:hover p:first-child {
+  font-size: 22px;
+}
+.concrete-delivery .container .advantages .items .item:hover {
+  background-image: url(../assets/working-truck.webp);
 }
 .concrete-delivery .container .advantages .items .item p:first-child {
   font-size: 18px;
   color: var(--yellow);
   font-family: "Oswald", sans-serif;
   margin-bottom: 0.4em;
+  transition: all 0.2s ease;
 }
 .concrete-delivery .container .advantages .items .item p:last-child {
   font-size: 16px;
@@ -451,7 +504,7 @@ ul li {
 .logo-slider .logo-slider-container {
   display: grid;
   position: absolute;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 40px;
   height: 100%;
   left: 0;
@@ -545,6 +598,15 @@ ul li {
   .slide
   .content
   .call-to-action
+  .phone-number:hover {
+  text-decoration: underline;
+  color: var(--light-yellow);
+}
+.call-to-action-slider-container
+  .call-to-action-slider
+  .slide
+  .content
+  .call-to-action
   .call-button {
   font-size: 16px;
   margin-top: 35px;
@@ -554,24 +616,8 @@ ul li {
   .slide
   .content
   .call-to-action
-  .call-button:hover {
-  background: var(--yellow-hover);
-}
-.call-to-action-slider-container
-  .call-to-action-slider
-  .slide
-  .content
-  .call-to-action
   .online-request {
   font-size: 16px;
-}
-.call-to-action-slider-container
-  .call-to-action-slider
-  .slide
-  .content
-  .call-to-action
-  .online-request:hover {
-  background: var(--light-blue-btn-hover);
 }
 
 /* =========================== buy-with-mixer ============================= */
@@ -604,6 +650,18 @@ ul li {
   height: 2px;
   margin-right: 0;
   margin-left: auto;
+}
+.buy-with-mixer .left .head:hover h2::after {
+  animation-name: headlineUnderline31;
+  animation-duration: 1s;
+}
+@keyframes headlineUnderline31 {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 31%;
+  }
 }
 .buy-with-mixer .left .head p {
   font-size: 16px;
@@ -687,6 +745,18 @@ ul li {
   background: var(--light-yellow);
   margin: 8px auto 0;
 }
+.recent .container .projects h2:hover::after {
+  animation-name: headlineUnderline34px;
+  animation-duration: 0.6s;
+}
+@keyframes headlineUnderline34px {
+  from {
+    width: 0;
+  }
+  to {
+    width: 34px;
+  }
+}
 .recent .container .projects p {
   text-align: center;
   color: var(--white);
@@ -697,7 +767,7 @@ ul li {
 
 .recent .container .projects .projects-images {
   overflow: hidden;
-  height: 265px;
+  height: 300px;
   position: relative;
   overflow-x: scroll;
 
@@ -747,9 +817,16 @@ ul li {
   z-index: 9;
   transform: translateX(0);
 }
-.recent .container .projects .projects-images .items .item .short-info .info a {
+.recent
+  .container
+  .projects
+  .projects-images
+  .items
+  .item
+  .short-info
+  .info
+  p:first-child {
   margin: 0 auto;
-  text-decoration: none;
   color: var(--white);
   font-family: sans-serif;
   font-size: 18px;
@@ -759,7 +836,15 @@ ul li {
   margin-bottom: 40px;
   opacity: 0;
 }
-.recent .container .projects .projects-images .items .item .short-info .info p {
+.recent
+  .container
+  .projects
+  .projects-images
+  .items
+  .item
+  .short-info
+  .info
+  p:last-child {
   margin: 0;
   color: var(--yellow);
   font-weight: 500;
@@ -776,7 +861,7 @@ ul li {
   .item:hover
   .short-info
   .info
-  a {
+  p:first-child {
   transform: translateY(20px);
   opacity: 1;
 }
@@ -788,23 +873,12 @@ ul li {
   .item:hover
   .short-info
   .info
-  p {
+  p:last-child {
   transform: translateY(-20px);
   opacity: 1;
 }
 .recent .container .projects .projects-images .items .item .short-info .info {
   margin: auto;
-}
-.recent
-  .container
-  .projects
-  .projects-images
-  .items
-  .item
-  .short-info
-  .info
-  a:hover {
-  opacity: 0.8;
 }
 
 .recent .container .projects .projects-images::-webkit-scrollbar-track {
@@ -844,6 +918,18 @@ ul li {
   height: 2px;
   border-radius: 2px;
   margin: 8px auto 0;
+}
+.recent .container .shipment h2:hover::after {
+  animation-name: headlineUnderline160px;
+  animation-duration: 0.8s;
+}
+@keyframes headlineUnderline160px {
+  from {
+    width: 0;
+  }
+  to {
+    width: 160px;
+  }
 }
 .recent .container .shipment p {
   margin-top: 30px;
@@ -891,7 +977,10 @@ ul li {
   border-radius: 4px;
   margin-top: 6px;
 }
-
+.blog .head h2:hover::after {
+  animation-name: headlineUnderline34px;
+  animation-duration: 0.5s;
+}
 .blog .head p {
   font-size: 16px;
   max-width: 555px;
@@ -926,14 +1015,25 @@ ul li {
   gap: 30px;
   margin-top: 60px;
 }
-.blog .posts .item img {
-  width: 100%;
-  display: flex;
+.blog .posts .item {
+  overflow: hidden;
   border-radius: 5px;
 }
+.blog .posts .item a:hover img {
+  transform: scale(1.1);
+  width: 100%;
+}
+.blog .posts .item a img {
+  width: 100%;
+  display: flex;
+  transition: 0.4s;
+}
 .blog .posts .item .content {
-  outline: 1px solid #e8e8e8;
+  border: 1px solid #e8e8e8;
   padding: 20px 30px;
+  background: var(--white);
+  z-index: 9;
+  position: relative;
 }
 .blog .posts .item .content .date {
   margin-bottom: 25px;
@@ -1239,7 +1339,7 @@ ul li {
   .recent .container .projects p {
     margin-top: 20px;
   }
-  .recent .container .projects .projects-images {
+  /* .recent .container .projects .projects-images {
     overflow: visible;
     height: auto;
   }
@@ -1252,6 +1352,9 @@ ul li {
   }
   .recent .container .projects .projects-images .items .item img {
     width: 100%;
+  } */
+  .recent .container .projects .projects-images .items .item {
+    height: 220px;
   }
   .recent .container .shipment .videos {
     flex-direction: column;
