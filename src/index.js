@@ -42,23 +42,25 @@ const dragStop = () => {
   slider.classList.remove("dragging");
 };
 const infiniteScroll = () => {
-  if (slider.scrollLeft === 0) {
+  if (slider.scrollLeft === 0 || slider.scrollRight === 0) {
     slider.classList.add("no-transition");
     slider.scrollLeft = slider.scrollWidth - 2 * slider.offsetWidth;
+    slider.scrollRight = slider.scrollWidth + 2 * slider.offsetWidth;
     slider.classList.remove("no-transition");
   } else if (
-    Math.ceil(slider.scrollLeft) ===
-    slider.scrollWidth - slider.offsetWidth
+    Math.ceil(slider.scrollLeft) === slider.scrollWidth - slider.offsetWidth ||
+    Math.ceil(slider.scrollRight) === slider.scrollWidth - slider.offsetWidth
   ) {
     slider.classList.add("no-transition");
     slider.scrollLeft = slider.offsetWidth;
+    slider.scrollRight = slider.offsetWidth;
     slider.classList.remove("no-transition");
   }
   clearTimeout(timeoutId);
   if (!wrapper.matches(":hover")) autoPlay();
 };
 const autoPlay = () => {
-  // if (window.innerWidth < 800 || !isAutoPlay) return;
+  if (window.innerWidth < 800 || !isAutoPlay) return;
   timeoutId = setTimeout(() => (slider.scrollLeft += firstslideWidth), 2500);
 };
 autoPlay();
