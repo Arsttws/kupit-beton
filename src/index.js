@@ -109,3 +109,39 @@ for (let i = 0; i < bubles.length; i++) {
     slideVideo(i);
   });
 }
+
+// const video = document.querySelectorAll(".videos-container > .video");
+videosContainer.addEventListener("touchstart", handleTouchStart, false);
+videosContainer.addEventListener("touchmove", handleTouchMove, false);
+
+let x1 = null;
+
+function handleTouchStart(e) {
+  const firstTouch = e.touches[0];
+  x1 = firstTouch.clientX;
+}
+
+function handleTouchMove(e) {
+  if (!x1) return false;
+  let x2 = e.touches[0].clientX;
+
+  let difference = x2 - x1;
+
+  if (difference > 0) {
+    videosContainer.style.left = 0 + "%";
+    bubles.forEach((buble) => {
+      buble.classList.remove("active");
+    });
+
+    bubles[0].classList.add("active");
+  } else {
+    videosContainer.style.left = -100 + "%";
+    bubles.forEach((buble) => {
+      buble.classList.remove("active");
+    });
+
+    bubles[1].classList.add("active");
+  }
+
+  x1 = null;
+}
