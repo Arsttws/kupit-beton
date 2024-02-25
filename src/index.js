@@ -54,8 +54,8 @@ const infiniteScroll = () => {
   if (!wrapper.matches(":hover")) autoPlay();
 };
 const autoPlay = () => {
-  // if (window.innerWidth < 800 || !isAutoPlay) return;
-  if (!isAutoPlay) return;
+  if (window.innerWidth < 320 || !isAutoPlay) return;
+  // if (!isAutoPlay) return;
   timeoutId = setTimeout(() => (slider.scrollLeft += firstslideWidth), 2500);
 };
 autoPlay();
