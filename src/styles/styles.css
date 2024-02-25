@@ -1137,6 +1137,9 @@ ul li {
   .slider-container .slider .slide .content {
     font-size: 70px;
   }
+  .recent .container .shipment {
+    max-width: 90%;
+  }
 }
 @media screen and (max-width: 1400px) {
   .slider-container .slider .slide .content {
@@ -1554,6 +1557,12 @@ ul li {
     .call-to-action
     .phone-number {
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 442px) {
+  .concrete-delivery .container .advantages .items .item:hover {
+    background-image: url(../assets/close-up-construction-site-excavator-square.jpg);
+    background-repeat: no-repeat;
   }
 }
 @media screen and (max-width: 350px) {
