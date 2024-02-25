@@ -6,7 +6,6 @@ let isDragging = false,
   isAutoPlay = true,
   startX,
   startScrollLeft,
-  startScrollRight,
   timeoutId;
 
 let slidePerView = Math.round(slider.offsetWidth / firstslideWidth);
@@ -22,7 +21,6 @@ sliderChildrens.slice(0, slidePerView).forEach((slide) => {
 });
 slider.classList.add("no-transition");
 slider.scrollLeft = slider.offsetWidth;
-slider.scrollRight = slider.offsetWidth;
 slider.classList.remove("no-transition");
 
 const dragStart = (e) => {
@@ -30,38 +28,34 @@ const dragStart = (e) => {
   slider.classList.add("dragging");
   startX = e.pageX;
   startScrollLeft = slider.scrollLeft;
-  startScrollRight = slider.scrollRight;
 };
 const dragging = (e) => {
   if (!isDragging) return;
   slider.scrollLeft = startScrollLeft - (e.pageX - startX);
-  slider.scrollRight = startScrollRight - (e.pageX + startX);
 };
 const dragStop = () => {
   isDragging = false;
   slider.classList.remove("dragging");
 };
 const infiniteScroll = () => {
-  if (slider.scrollLeft === 0 || slider.scrollRight === 0) {
+  if (slider.scrollLeft === 0) {
     slider.classList.add("no-transition");
     slider.scrollLeft = slider.scrollWidth - 2 * slider.offsetWidth;
-    slider.scrollRight = slider.scrollWidth + 2 * slider.offsetWidth;
     slider.classList.remove("no-transition");
   } else if (
-    Math.ceil(slider.scrollLeft) === slider.scrollWidth - slider.offsetWidth ||
-    Math.ceil(slider.scrollRight) === slider.scrollWidth - slider.offsetWidth
+    Math.ceil(slider.scrollLeft) ===
+    slider.scrollWidth - slider.offsetWidth
   ) {
     slider.classList.add("no-transition");
     slider.scrollLeft = slider.offsetWidth;
-    slider.scrollRight = slider.offsetWidth;
     slider.classList.remove("no-transition");
   }
   clearTimeout(timeoutId);
   if (!wrapper.matches(":hover")) autoPlay();
 };
 const autoPlay = () => {
-  if (!isAutoPlay) return;
   // if (window.innerWidth < 800 || !isAutoPlay) return;
+  if (!isAutoPlay) return;
   timeoutId = setTimeout(() => (slider.scrollLeft += firstslideWidth), 2500);
 };
 autoPlay();
