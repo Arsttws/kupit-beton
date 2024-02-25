@@ -471,7 +471,8 @@ ul li {
   font-size: 22px;
 }
 .concrete-delivery .container .advantages .items .item:hover {
-  background-image: url(../assets/working-truck.webp);
+  background-image: url(../assets/close-up-construction-site-excavator.jpg);
+  background-repeat: no-repeat;
 }
 .concrete-delivery .container .advantages .items .item p:first-child {
   font-size: 18px;
@@ -1001,13 +1002,15 @@ ul li {
   line-height: 1.8em;
 }
 .recent .container .shipment .videos {
-  display: flex;
   max-width: 900px;
   margin: 0 auto;
-  justify-content: space-between;
   margin-top: 70px;
 }
-.recent .container .shipment .videos .video video {
+.recent .container .shipment .videos .videos-container {
+  display: flex;
+  justify-content: space-between;
+}
+.recent .container .shipment .videos .videos-container .video video {
   width: 320px;
   height: 560px;
   display: flex;
@@ -1228,6 +1231,13 @@ ul li {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1306px) {
+  .concrete-delivery .container .advantages .items .item:hover {
+    background-image: url(../assets/close-up-construction-site-excavator-rect.jpg);
+    background-repeat: no-repeat;
+  }
+}
+
 @media screen and (max-width: 1020px) {
   .slider-container .slider .slide .content {
     font-size: 60px;
@@ -1240,13 +1250,13 @@ ul li {
     height: 520px;
   }
   .scroll-to-top {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     right: 10px;
     bottom: 10px;
   }
   .scroll-to-top img {
-    max-width: 12px;
+    max-width: 13px;
   }
 }
 
@@ -1448,13 +1458,49 @@ ul li {
     height: 220px;
   }
   .recent .container .shipment .videos {
-    flex-direction: column;
-    max-width: fit-content;
-    gap: 20px;
+    max-width: 320px;
+    width: 100%;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
   }
-  .recent .container .shipment .videos .video video {
+  .recent .container .shipment .videos .videos-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: 0.5s;
+    gap: 0;
+  }
+  .recent .container .shipment .videos .videos-container .video {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  .recent .container .shipment .videos .videos-container .video video {
     width: 300px;
     height: 540px;
+  }
+  .video-bubles {
+    display: flex;
+    gap: 15px;
+    width: fit-content;
+    margin: 10px auto 0;
+  }
+  .video-bubles .item {
+    background: var(--light-yellow);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .video-bubles .item:hover,
+  .video-bubles .item.active {
+    scale: 1.2;
+    background: var(--yellow);
   }
 }
 
