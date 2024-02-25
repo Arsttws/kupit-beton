@@ -6,6 +6,7 @@ let isDragging = false,
   isAutoPlay = true,
   startX,
   startScrollLeft,
+  startScrollRight,
   timeoutId;
 
 let slidePerView = Math.round(slider.offsetWidth / firstslideWidth);
@@ -21,6 +22,7 @@ sliderChildrens.slice(0, slidePerView).forEach((slide) => {
 });
 slider.classList.add("no-transition");
 slider.scrollLeft = slider.offsetWidth;
+slider.scrollRight = slider.offsetWidth;
 slider.classList.remove("no-transition");
 
 const dragStart = (e) => {
@@ -28,10 +30,12 @@ const dragStart = (e) => {
   slider.classList.add("dragging");
   startX = e.pageX;
   startScrollLeft = slider.scrollLeft;
+  startScrollRight = slider.scrollRight;
 };
 const dragging = (e) => {
   if (!isDragging) return;
   slider.scrollLeft = startScrollLeft - (e.pageX - startX);
+  slider.scrollRight = startScrollRight - (e.pageX + startX);
 };
 const dragStop = () => {
   isDragging = false;
