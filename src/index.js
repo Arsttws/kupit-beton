@@ -1,40 +1,3 @@
-// const slider = document.querySelector(".logo-slider");
-// const sliderContainer = document.querySelector(".logo-slider-container");
-
-// let isPressed = false;
-// let cursorXPosition;
-
-// slider.addEventListener("mousedown", (e) => {
-//   isPressed = true;
-//   cursorXPosition = e.offsetX - sliderContainer.offsetLeft;
-// });
-
-// window.addEventListener("mouseup", () => {
-//   isPressed = false;
-// });
-// slider.addEventListener("mouseup", () => {
-//   slider.style.cursor = "grab";
-// });
-
-// slider.addEventListener("mousemove", (e) => {
-//   if (!isPressed) return;
-//   e.preventDefault();
-
-//   sliderContainer.style.left = `${e.offsetX - cursorXPosition}px`;
-//   bound();
-// });
-
-// function bound() {
-//   const slider_rect = slider.getBoundingClientRect();
-//   const cont_rect = sliderContainer.getBoundingClientRect();
-
-//   if (parseInt(sliderContainer.style.left) > 0) {
-//     sliderContainer.style.left = 0;
-//   } else if (cont_rect.right < slider_rect.right) {
-//     sliderContainer.style.left = `-${cont_rect.width - slider_rect.width}px`;
-//   }
-// }
-
 const wrapper = document.querySelector(".logo-slider-wrapper");
 const slider = document.querySelector(".logo-slider");
 const firstslideWidth = slider.querySelector(".logo-slide").offsetWidth;
@@ -110,3 +73,39 @@ document.addEventListener("mouseup", dragStop);
 slider.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+// const bubles = document.querySelector(".video-bubles");
+// const bubleItem = document.querySelectorAll(".video-bubles > .item");
+// const video = document.querySelectorAll(".videos > .video");
+// bubles.addEventListener("click", (e) => {
+//   if (e.target.closest(".item")) {
+//     const buble = e.target.closest(".item");
+//     const video = e.target.closest(".video");
+
+//     bubleItem.forEach((e) => {
+//       e.classList.remove("active");
+//     });
+//     buble.classList.add("active");
+//     video.classList.add("active");
+//   }
+// });
+
+const videoSlider = document.querySelector(".videos");
+const videosContainer = document.querySelector(".videos-container");
+const bubles = document.querySelectorAll(".video-bubles > .item");
+
+function slideVideo(id) {
+  videosContainer.style.left = -100 * id + "%";
+
+  bubles.forEach((buble) => {
+    buble.classList.remove("active");
+  });
+
+  bubles[id].classList.add("active");
+}
+
+for (let i = 0; i < bubles.length; i++) {
+  bubles[i].addEventListener("click", () => {
+    slideVideo(i);
+  });
+}
