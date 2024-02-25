@@ -1339,10 +1339,13 @@ ul li {
   .recent .container .projects p {
     margin-top: 20px;
   }
-  /* .recent .container .projects .projects-images {
-    overflow: visible;
-    height: auto;
+  .recent .container .projects .projects-images {
+    height: 260px;
   }
+  .recent .container .projects .projects-images::-webkit-scrollbar-track {
+    margin: 50px;
+  }
+  /*
   .recent .container .projects .projects-images .items {
     grid-template-columns: repeat(2, 1fr);
     position: static;
@@ -1389,5 +1392,9 @@ ul li {
 @media screen and (max-width: 480px) {
   .slider-container .slider .slide .content {
     font-size: 32px;
+  }
+
+  .recent .container .projects .projects-images::-webkit-scrollbar-track {
+    margin: 30px;
   }
 }
