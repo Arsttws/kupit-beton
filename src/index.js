@@ -86,6 +86,8 @@ const videoSlider = document.querySelector(".videos");
 const videosContainer = document.querySelector(".videos-container");
 const bubles = document.querySelectorAll(".video-bubles > .item");
 
+let i = 1;
+
 function slideVideo(id) {
   videosContainer.style.left = -100 * id + "%";
 
@@ -96,9 +98,10 @@ function slideVideo(id) {
   bubles[id].classList.add("active");
 }
 
-for (let i = 0; i < bubles.length; i++) {
-  bubles[i].addEventListener("click", () => {
-    slideVideo(i);
+for (let j = 0; j < bubles.length; j++) {
+  bubles[j].addEventListener("click", () => {
+    slideVideo(j);
+    i = j + 1;
   });
 }
 
@@ -107,7 +110,6 @@ videosContainer.addEventListener("touchstart", handleTouchStart, false);
 videosContainer.addEventListener("touchmove", handleTouchMove, false);
 
 let x1 = null;
-let i = 1;
 const maxLeft = "-200%";
 
 function handleTouchStart(e) {
