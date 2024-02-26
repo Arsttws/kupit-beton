@@ -456,6 +456,7 @@ ul li {
   text-align: left;
   line-height: 1.8em;
   margin-top: 5px;
+  text-align: justify;
 }
 .concrete-delivery .container .advantages .items {
   display: grid;
@@ -1508,7 +1509,6 @@ ul li {
     transition: 0.3s;
     cursor: pointer;
   }
-  .video-bubles .item:hover,
   .video-bubles .item.active {
     scale: 1.2;
     background: var(--yellow);
