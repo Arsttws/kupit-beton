@@ -1140,8 +1140,10 @@ ul li {
   .slider-container .slider .slide .content {
     font-size: 70px;
   }
-  .recent .container .shipment {
+  .recent .container .shipment p {
     max-width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 1400px) {
