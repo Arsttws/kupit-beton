@@ -1475,7 +1475,7 @@ ul li {
     width: 200%;
     height: 100%;
     transition: 0.5s;
-    gap: 0;
+    gap: 20px;
   }
   .recent .container .shipment .videos .videos-container .video {
     margin: 0 auto;
