@@ -31,7 +31,7 @@ const dragStart = (e) => {
 };
 const dragging = (e) => {
   if (!isDragging) return;
-  slider.scrollLeft = startScrollLeft - (e.pageX - startX);
+  slider.scrollLeft = startScrollLeft + (e.pageX + startX);
 };
 const dragStop = () => {
   isDragging = false;
@@ -40,7 +40,7 @@ const dragStop = () => {
 const infiniteScroll = () => {
   if (slider.scrollLeft === 0) {
     slider.classList.add("no-transition");
-    slider.scrollLeft = slider.scrollWidth - 2 * slider.offsetWidth;
+    slider.scrollLeft = slider.scrollWidth + 2 * slider.offsetWidth;
     slider.classList.remove("no-transition");
   } else if (
     Math.ceil(slider.scrollLeft) ===
