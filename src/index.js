@@ -107,6 +107,8 @@ videosContainer.addEventListener("touchstart", handleTouchStart, false);
 videosContainer.addEventListener("touchmove", handleTouchMove, false);
 
 let x1 = null;
+let i = 1;
+const maxLeft = "-200%";
 
 function handleTouchStart(e) {
   const firstTouch = e.touches[0];
@@ -118,21 +120,36 @@ function handleTouchMove(e) {
   let x2 = e.touches[0].clientX;
 
   let difference = x2 - x1;
+  console.log(difference);
 
-  if (difference > 0) {
-    videosContainer.style.left = 0 + "%";
+  if (difference > 5) {
+    i--;
+    if (videosContainer.style.left === "0%") {
+      console.log(videosContainer.style.left);
+
+      i = 1;
+    }
+    videosContainer.style.left = -100 * (i - 1) + "%";
+    console.log(i);
+    // i++;
     bubles.forEach((buble) => {
       buble.classList.remove("active");
     });
 
-    bubles[0].classList.add("active");
-  } else {
-    videosContainer.style.left = -100 + "%";
+    bubles[i - 1].classList.add("active");
+  } else if (difference < -5) {
+    i++;
+    if (videosContainer.style.left === maxLeft) {
+      i = 3;
+    }
+    videosContainer.style.left = -100 * (i - 1) + "%";
+    // i++;
+    console.log(i);
     bubles.forEach((buble) => {
       buble.classList.remove("active");
     });
 
-    bubles[1].classList.add("active");
+    bubles[i - 1].classList.add("active");
   }
 
   x1 = null;
