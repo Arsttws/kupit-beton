@@ -127,6 +127,51 @@ header .top-header {
   align-items: center;
   margin: 15px auto;
 }
+header .top-header .call-button {
+  padding: 4px 22px;
+  background: var(--light-yellow);
+  text-decoration: none;
+  color: #051829;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-right: 0;
+  margin-left: auto;
+  border: 2px solid var(--light-yellow);
+  transition: 0.2s;
+}
+header .top-header .call-button:hover {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+header .top-header .contact {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header .top-header .contact div.item span,
+header .top-header .contact div.item a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  transition: 0.2s;
+}
+header .top-header .contact div.item a:hover {
+  color: var(--light-yellow);
+}
+header .top-header .contact div.item {
+  display: flex;
+}
+header .top-header .contact div .image {
+  width: 16px;
+  margin-right: 10px;
+}
+header .top-header .contact div img {
+  width: 100%;
+  object-fit: cover;
+}
 header .bottom-header {
   height: 90px;
   background: var(--white);
@@ -138,6 +183,104 @@ header .bottom-header {
 header .bottom-header .logo-container img {
   display: flex;
 }
+header .bottom-header .hamburger {
+  display: none;
+}
+header .bottom-header nav {
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+header .bottom-header nav .main-item {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+header .bottom-header nav .main-item:hover .nav-link {
+  display: block;
+}
+header .bottom-header nav .main-item:hover .nav-link:after {
+  display: flex;
+  content: "";
+  width: 25px;
+  background: var(--light-yellow);
+  height: 3px;
+  border-radius: 4px;
+  margin: 0 auto;
+  animation-name: headlineUnderline25;
+  animation-duration: 0.3s;
+}
+@keyframes headlineUnderline25 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25px;
+  }
+}
+header .bottom-header nav .item span,
+header .bottom-header nav .item a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 10px;
+  display: flex;
+}
+header .bottom-header nav .item .second-level-list,
+header .bottom-header nav .item .third-level-list {
+  position: absolute;
+  display: none;
+  background: var(--dark-blue);
+}
+header .bottom-header nav .item .second-level-list,
+header .bottom-header nav .item .third-level-list {
+  display: none;
+  flex-direction: column;
+}
+header .bottom-header nav .item .third-level-list {
+  left: 100%;
+  width: 100%;
+}
+header .bottom-header nav .item .third-level-list.first {
+  top: 35px;
+}
+header .bottom-header nav .item .third-level-list.last {
+  top: 70px;
+}
+header .bottom-header nav .item .second-level-list a,
+header .bottom-header nav .item .third-level-list a,
+header .bottom-header nav .item .second-level-list span,
+header .bottom-header nav .item .third-level-list span {
+  text-decoration: none;
+  color: #c3bfbf;
+  padding: 10px 20px;
+}
+header .bottom-header nav .item:hover > .second-level-list {
+  display: flex;
+}
+header .bottom-header nav .item .item span,
+header .bottom-header nav .item .item a {
+  font-weight: 400;
+  font-size: 13px;
+}
+header .bottom-header nav .item .item:hover span,
+header .bottom-header nav .item .item a:hover {
+  background: var(--light-yellow);
+  color: var(--white);
+}
+header
+  .bottom-header
+  nav
+  .item
+  .second-level-list
+  .item:hover
+  > .third-level-list {
+  display: flex;
+}
+/* header .bottom-header nav .item .second-level-list:hover {
+  display: flex;
+} */
 
 /* =========================== slider =========================== */
 
@@ -1318,6 +1461,7 @@ header .bottom-header .logo-container img {
     height: 70px;
     margin: 0;
     background: var(--dark-blue);
+    padding: 0 15px;
   }
   header .bottom-header {
     height: 65px;
@@ -1325,9 +1469,87 @@ header .bottom-header .logo-container img {
   header .bottom-header .logo-container {
     width: 180px;
   }
-  header .bottom-header .logo-container img {
-    object-fit: cover;
+  header .bottom-header .hamburger {
+    display: flex;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 8px;
+    background: var(--dark-blue);
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 2px;
+  }
+  header .bottom-header .hamburger span {
+    background: var(--white);
+    display: flex;
+    width: 20px;
+    content: "";
+    height: 1px;
+  }
+  header .bottom-header nav {
+    display: flex;
     width: 100%;
+    flex-direction: column;
+    position: absolute;
+    z-index: 99;
+    align-items: center;
+    top: 135px;
+    left: -100%;
+    background: var(--white);
+    transition: 0.2s;
+  }
+  header .bottom-header nav.active {
+    left: 0;
+  }
+  header .bottom-header nav .item .second-level-list,
+  header .bottom-header nav .item .third-level-list {
+    position: static;
+  }
+  header .bottom-header nav .item:hover > .second-level-list {
+    display: none;
+  }
+  header .bottom-header nav .item .second-level-list.active {
+    display: flex;
+    width: 100%;
+  }
+  header
+    .bottom-header
+    nav
+    .item
+    .second-level-list
+    .item
+    .third-level-list.active {
+    display: flex;
+    width: 100%;
+  }
+  header .bottom-header nav .main-item {
+    width: fit-content;
+  }
+  header .bottom-header nav .item {
+    width: 100%;
+  }
+  header .bottom-header nav .main-item:hover .nav-link:after {
+    display: none;
+  }
+  header .bottom-header nav .item span {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  header .bottom-header nav .item .item:hover span,
+  header .bottom-header nav .item .item a:hover {
+    background: var(--light-yellow);
+    color: var(--white);
+  }
+  header
+    .bottom-header
+    nav
+    .item
+    .second-level-list
+    .item:hover
+    > .third-level-list {
+    display: initial;
   }
 }
 
@@ -1342,6 +1564,22 @@ header .bottom-header .logo-container img {
   }
 }
 @media screen and (max-width: 768px) {
+  /* ==================== header ================ */
+  header .top-header,
+  header .top-header .contact {
+    flex-direction: column;
+  }
+  header .top-header .contact {
+    gap: 10px;
+  }
+  header .top-header {
+    height: auto;
+    padding: 30px 15px;
+  }
+  header .top-header .call-button {
+    margin: 15px auto 0;
+  }
+
   /* ==================== slider ================ */
   .slider-container .slider .slide .content {
     font-size: 44px;
