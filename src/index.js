@@ -156,3 +156,19 @@ function handleTouchMove(e) {
 
   x1 = null;
 }
+
+document.querySelector(".hamburger").addEventListener("click", () => {
+  document.querySelector(".navigation").classList.toggle("active");
+});
+document.querySelector(".nav-concrete").addEventListener("click", () => {
+  document.getElementById("concrete-list").classList.toggle("active");
+});
+document.querySelector(".nav-to-rent").addEventListener("click", () => {
+  document.getElementById("rent-second-list").classList.toggle("active");
+});
+document.getElementById("on-gravel").addEventListener("click", () => {
+  document.getElementById("gravel-third").classList.toggle("active");
+});
+document.getElementById("on-crushed").addEventListener("click", () => {
+  document.getElementById("crushed-third").classList.toggle("active");
+});
