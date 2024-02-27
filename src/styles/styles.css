@@ -157,6 +157,7 @@ header .top-header .contact div.item a {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   transition: 0.2s;
+  font-style: normal;
 }
 header .top-header .contact div.item a:hover {
   color: var(--light-yellow);
@@ -196,6 +197,13 @@ header .bottom-header nav .main-item {
   cursor: pointer;
   padding: 10px 20px;
 }
+header .bottom-header nav .main-item .link {
+  display: flex;
+}
+header .bottom-header nav .main-item img {
+  width: 14px;
+  margin-left: 20px;
+}
 header .bottom-header nav .main-item:hover .nav-link {
   display: block;
 }
@@ -227,6 +235,9 @@ header .bottom-header nav .item a {
   padding: 10px;
   display: flex;
 }
+/* header .bottom-header nav .item .second-level-list {
+  margin-top: 40px;
+} */
 header .bottom-header nav .item .second-level-list,
 header .bottom-header nav .item .third-level-list {
   position: absolute;
@@ -445,9 +456,9 @@ header
 .buy-in-minsk .information .text .info p:last-child {
   margin-bottom: 0;
 }
-.buy-in-minsk .information .text .info p span {
+.buy-in-minsk .information .text .info p strong {
   color: var(--yellow);
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 .buy-in-minsk .information .text .call-to-action .phone-number {
   text-align: center;
@@ -1473,18 +1484,44 @@ header
     display: flex;
     margin-right: 0;
     margin-left: auto;
-    padding: 8px;
+    align-items: center;
     background: var(--dark-blue);
+
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+  }
+  header .bottom-header .hamburger .items {
+    display: flex;
     flex-direction: column;
     gap: 4px;
-    border-radius: 2px;
+    margin: 0 auto;
+    transition: 0.2s;
   }
-  header .bottom-header .hamburger span {
+  header .bottom-header .hamburger .items span {
     background: var(--white);
     display: flex;
     width: 20px;
     content: "";
     height: 1px;
+  }
+  header .bottom-header .hamburger.active .items {
+    gap: 0px;
+    position: relative;
+    padding: 10px;
+  }
+  header .bottom-header .hamburger.active .items span:nth-child(2) {
+    display: none;
+  }
+  header .bottom-header .hamburger.active .items span:first-child {
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0;
+  }
+  header .bottom-header .hamburger.active .items span:last-child {
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
   }
   header .bottom-header nav {
     display: flex;
@@ -1522,6 +1559,9 @@ header
     display: flex;
     width: 100%;
   }
+  header .bottom-header nav .item div .item .third-level-list a {
+    padding-left: 40px;
+  }
   header .bottom-header nav .main-item {
     width: fit-content;
   }
@@ -1537,20 +1577,11 @@ header
     display: flex;
     align-items: center;
   }
-  header .bottom-header nav .item .item:hover span,
+  /* header .bottom-header nav .item .item:hover span,
   header .bottom-header nav .item .item a:hover {
     background: var(--light-yellow);
     color: var(--white);
-  }
-  header
-    .bottom-header
-    nav
-    .item
-    .second-level-list
-    .item:hover
-    > .third-level-list {
-    display: initial;
-  }
+  } */
 }
 
 @media screen and (max-width: 940px) {
@@ -1578,6 +1609,9 @@ header
   }
   header .top-header .call-button {
     margin: 15px auto 0;
+  }
+  header .bottom-header nav {
+    top: 220px;
   }
 
   /* ==================== slider ================ */

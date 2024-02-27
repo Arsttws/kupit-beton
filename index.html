@@ -3,19 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="./src/styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
     />
+    
+    <title>Бетон Центр: Купить бетон в Минске с доставкой</title>
+    <meta name="description" content="Купить бетон с доставкой по Минску и Минской области. Большой ассортимент марок. Аренда спецтехники в Беларуси">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arsttws.github.io/kupit-beton/">
+    <meta property="og:title" content="Бетон Центр: Купить бетон в Минске с доставкой">
+    <meta property="og:image" content="https://arsttws.github.io/kupit-beton/src/assets/main-truck-og.jpg">
+    <meta property="og:description" content="Купить бетон с доставкой по Минску и Минской области. Большой ассортимент марок. Аренда спецтехники в Беларуси. Звоните +375 (29) 750-13-68" />
+    <meta name="description" content="Купить бетон с доставкой по Минску и Минской области. Большой ассортимент марок. Аренда спецтехники в Беларуси. Звоните +375 (29) 750-13-68" />
+    <meta property="og:site_name" content="Бетон Центр">
+    <meta property="og:locale" content="ru_BY">
+
+    <meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="arsttws.github.io/kupit-beton/">
+<meta property="twitter:url" content="https://arsttws.github.io/kupit-beton/">
+<meta name="twitter:title" content="Бетон Центр: Купить бетон в Минске с доставкой">
+<meta name="twitter:description" content="Купить бетон с доставкой по Минску и Минской области. Большой ассортимент марок. Аренда спецтехники в Беларуси. Звоните +375 (29) 750-13-68">
+<meta name="twitter:image" content="https://arsttws.github.io/kupit-beton/src/assets/main-truck-og.jpg">
   </head>
   <body>
     <header>
       <div class="top-header wrapper">
-        <div class="contact">
+        <address   class="contact">
           <div class="location item">
             <div class="image">
               <img src="./src/assets/location.svg" alt="Мы здесь" />
@@ -28,7 +46,7 @@
             </div>
             <a href="tel: +375297501368">+375 (29) 750-13-68</a>
           </div>
-        </div>
+        </address>
         <a href="tel: +375297501368" class="call-button">Позвонить</a>
       </div>
       <div class="bottom-header wrapper">
@@ -37,8 +55,10 @@
         </div>
         <nav class="navigation">
           <div class="item main-item">
-            <span class="nav-link nav-concrete">Бетон</span>
-            <div class="second-level-list" id="concrete-list">
+            <div class="link nav-concrete">
+              <span class="nav-link ">Бетон </span><img src="./src/assets/arrow.svg" alt=">">
+            </div>
+              <div class="second-level-list" id="concrete-list">
               <div class="item">
                 <a href="/">Собственное производство</a>
               </div>
@@ -66,7 +86,10 @@
             </div>
           </div>
           <div class="item main-item">
-            <span class="nav-link nav-to-rent">Техника в аренду </span>
+            <div class="link nav-to-rent">            
+              <span class="nav-link ">Техника в аренду </span>
+              <img src="./src/assets/arrow.svg" alt=">">
+            </div>
             <div class="second-level-list" id="rent-second-list">
               <div class="item">
                 <a href="/">АвтобетоноСмеситель</a>
@@ -87,24 +110,28 @@
           </div>
         </nav>
         <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
-    <div class="slider-container">
-      <div class="slider">
-        <div class="slide">
-          <img src="./src/assets/main-truck.jpg" alt="truck" />
-          <div class="img-cover"></div>
-          <div class="content">
-            <h2>БЕТОН <span>&</span> СПЕЦ. ТЕХНИКА</h2>
+          <div class="items">
+
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="about wrapper">
+    </header>
+    <main>
+      <section class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <img src="./src/assets/main-truck.webp" alt="truck" />
+            <div class="img-cover"></div>
+            <div class="content">
+              <h2>БЕТОН <span>&</span> СПЕЦ. ТЕХНИКА</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about wrapper">
       <div class="container">
         <div class="items">
           <div class="item">
@@ -154,22 +181,22 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="buy-in-minsk wrapper">
+    </section>
+    <section class="buy-in-minsk wrapper">
       <div class="headline">
         <h2>Купить бетон с доставкой</h2>
       </div>
       <div class="information">
         <div class="images item">
           <img
-            src="./src/assets/buy-in-minsk.jpg"
+          src="./src/assets/buy-in-minsk.webp"
             alt="Купить бетон в Минске с доставкой"
           />
         </div>
         <div class="text item">
           <div class="info">
             <p>
-              <span>Уже более 10 лет</span> осуществляем производство бетона и
+              <strong>Уже более 10 лет</strong> осуществляем производство бетона и
               его поставку на строительные объекты различного масштаба города
               Минска и Минского района. Работаем как с физ. лицами, так и
               организациями различных форм собственности.
@@ -191,15 +218,15 @@
           </div>
           <div class="call-to-action">
             <a href="tel:+375297501368" class="phone-number"
-              >+375 (29) 750-13-68</a
+            >+375 (29) 750-13-68</a
             >
             <a href="tel:+375297501368" class="call-button">Позвонить!</a>
             <button class="online-request">Онлайн-запрос</button>
           </div>
         </div>
       </div>
-    </div>
-    <div class="buy-delivery">
+    </section>
+    <section class="buy-delivery">
       <div class="headline">
         <h2>Бетон с доставкой. Аренда спец. техники</h2>
       </div>
@@ -223,7 +250,7 @@
               <p>Гарантированное качество. Полное соответствие ГОСТ.</p>
             </div>
             <div class="item img">
-              <img src="./src/assets/crushedstone.jpg" alt="Бетон на щебне" />
+              <img src="./src/assets/crushedstone.webp" alt="Бетон на щебне" />
             </div>
             <div class="item">
               <p>Бетон на <span>гравии</span> , марок:</p>
@@ -244,11 +271,11 @@
               <p>Только качественный бетон. Соблюдены все ГОСТ.</p>
             </div>
             <div class="item img">
-              <img src="./src/assets/gravel.jpg" alt="Бетон на щебне" />
+              <img src="./src/assets/gravel.webp" alt="Бетон на щебне" />
             </div>
             <div class="item img">
               <img
-                src="./src/assets/concrete-mixer-truck.jpg"
+                src="./src/assets/concrete-mixer-truck.webp"
                 alt="Бетон на
               щебне"
               />
@@ -269,7 +296,7 @@
               </p>
             </div>
             <div class="item img">
-              <img src="./src/assets/putzmeister.jpg" alt="Бетон на щебне" />
+              <img src="./src/assets/putzmeister.webp" alt="Бетон на щебне" />
             </div>
             <div class="item rent">
               <p>Аренда спец. техники <span>без оператора</span></p>
@@ -283,8 +310,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="concrete-delivery wrapper">
+    </section>
+    <section class="concrete-delivery wrapper">
       <div class="container">
         <div class="headline">
           <h2>Бетон с доставкой в Минске и по Минскому району</h2>
@@ -336,7 +363,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- <div class="logo-slider wrapper">
       <div class="logo-slider-container">
         <div class="slide">
@@ -353,8 +380,8 @@
         </div>
       </div>
     </div> -->
-
-    <div class="logo-slider-wrapper wrapper">
+    
+    <section class="logo-slider-wrapper wrapper">
       <ul class="logo-slider">
         <li class="logo-slide">
           <div class="logo-img">
@@ -377,9 +404,9 @@
           </div>
         </li>
       </ul>
-    </div>
-
-    <div class="call-to-action-slider-container">
+    </section>
+    
+    <section class="call-to-action-slider-container">
       <div class="call-to-action-slider">
         <div class="slide">
           <img src="./src/assets/working-truck.webp" alt="truck" />
@@ -388,7 +415,7 @@
             <p>Есть вопросы? Мы на связи:</p>
             <div class="call-to-action">
               <a href="tel:+375297501368" class="phone-number"
-                >+375 (29) 750-13-68</a
+              >+375 (29) 750-13-68</a
               >
               <a href="tel:+375297501368" class="call-button">Позвонить!</a>
               <button class="online-request">Онлайн-запрос</button>
@@ -396,8 +423,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="buy-with-mixer wrapper">
+    </section>
+    <section class="buy-with-mixer wrapper">
       <div class="left">
         <div class="head">
           <h2>Нужно купить бетон с доставкой?</h2>
@@ -468,8 +495,8 @@
           сможете в соответствующих разделах сайта.
         </p>
       </div>
-    </div>
-    <div class="recent">
+    </section>
+    <section class="recent">
       <div class="container">
         <div class="projects">
           <h2>НЕДАВНИЕ ПРОЕКТЫ</h2>
@@ -483,7 +510,7 @@
                     <p>Недавние проекты</p>
                   </div>
                 </div>
-                <img src="./src/assets/basement.jpg" alt="" />
+                <img src="./src/assets/basement.webp" alt="" />
               </div>
               <div class="item">
                 <div class="short-info">
@@ -492,7 +519,7 @@
                     <p>Недавние проекты</p>
                   </div>
                 </div>
-                <img src="./src/assets/strip-basement.jpg" alt="" />
+                <img src="./src/assets/strip-basement.webp" alt="" />
               </div>
               <div class="item">
                 <div class="short-info">
@@ -501,7 +528,7 @@
                     <p>Недавние проекты</p>
                   </div>
                 </div>
-                <img src="./src/assets/preparation.jpg" alt="" />
+                <img src="./src/assets/preparation.webp" alt="" />
               </div>
               <div class="item">
                 <div class="short-info">
@@ -510,7 +537,7 @@
                     <p>Недавние проекты</p>
                   </div>
                 </div>
-                <img src="./src/assets/basement-pour.jpg" alt="" />
+                <img src="./src/assets/basement-pour.webp" alt="" />
               </div>
               <div class="item">
                 <div class="short-info">
@@ -528,12 +555,12 @@
                     <p>Недавние проекты</p>
                   </div>
                 </div>
-                <img src="./src/assets/mall.jpg" alt="" />
+                <img src="./src/assets/mall.webp" alt="" />
               </div>
             </div>
           </div>
         </div>
-        <div class="shipment">
+        <section class="shipment">
           <h2>Бетон с доставкой</h2>
           <p>
             Доставка бетона именно туда, где он должен быть! Даже если вы,
@@ -543,26 +570,26 @@
           <div class="videos">
             <div class="videos-container">
               <div class="video">
-                <video controls poster="./src/assets/video-cover.jpg">
+                <video controls poster="./src/assets/video-cover.webp">
                   <source
-                    src="./src/assets/beton-s-dostavkoj-1.mp4"
+                  src="./src/assets/beton-s-dostavkoj-1.mp4"
+                  type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="video">
+                <video controls poster="./src/assets/video-cover.webp">
+                  <source
+                  src="./src/assets/beton-s-dostavkoj-2.mp4"
                     type="video/mp4"
                   />
                 </video>
               </div>
               <div class="video">
-                <video controls poster="./src/assets/video-cover.jpg">
+                <video controls poster="./src/assets/video-cover.webp">
                   <source
-                    src="./src/assets/beton-s-dostavkoj-2.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <div class="video">
-                <video controls poster="./src/assets/video-cover.jpg">
-                  <source
-                    src="./src/assets/beton-s-dostavkoj-2.mp4"
-                    type="video/mp4"
+                  src="./src/assets/beton-s-dostavkoj-2.mp4"
+                  type="video/mp4"
                   />
                 </video>
               </div>
@@ -573,10 +600,10 @@
             <div class="item"></div>
             <div class="item"></div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
-    <div class="blog wrapper">
+    </section>
+    <section class="blog wrapper">
       <div class="head">
         <h2>БЛОГ</h2>
         <p>
@@ -587,12 +614,12 @@
         </p>
         <a href="/">Больше статей</a>
       </div>
-      <div class="posts">
+      <article class="posts">
         <div class="item">
           <a href="/">
             <img
-              src="./src/assets/shipment-minsk.jpg"
-              alt="Бетон с доставкой по Минску и району"
+            src="./src/assets/shipment-minsk.webp"
+            alt="Бетон с доставкой по Минску и району"
             />
           </a>
           <div class="content">
@@ -609,8 +636,8 @@
         <div class="item">
           <a href="/">
             <img
-              src="./src/assets/shipment-district.jpg"
-              alt="Бетон с доставкой по Минску и району"
+            src="./src/assets/shipment-district.webp"
+            alt="Бетон с доставкой по Минску и району"
             />
           </a>
           <div class="content">
@@ -625,8 +652,8 @@
         <div class="item">
           <a href="/">
             <img
-              src="./src/assets/mall.jpg"
-              alt="Бетон с доставкой по Минску и району"
+            src="./src/assets/mall.webp"
+            alt="Бетон с доставкой по Минску и району"
             />
           </a>
           <div class="content">
@@ -641,12 +668,13 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
+  </main>
 
     <a href="#" class="scroll-to-top"
       ><img src="./src/assets/top-arrow.svg" alt="Наверх"
-    /></a>
-    <script src="./src/index.js"></script>
-  </body>
+      /></a>
+      <script src="./src/index.js"></script>
+    </body>
 </html>
