@@ -200,9 +200,13 @@ header .bottom-header nav .main-item {
 header .bottom-header nav .main-item .link {
   display: flex;
 }
+header .bottom-header nav .main-item .link:hover > img {
+transform: rotate(180deg);
+transition: .3s;
+}
 header .bottom-header nav .main-item img {
   width: 14px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 header .bottom-header nav .main-item:hover .nav-link {
   display: block;
@@ -372,7 +376,7 @@ header
   font-family: "Roboto", sans-serif;
 }
 
-.about .container .items .number p {
+.about .container .items .number h2 {
   color: var(--yellow);
   font-size: 32px;
   font-weight: normal;
@@ -802,18 +806,16 @@ header
 .call-to-action-slider-container
   .call-to-action-slider
   .slide
-  .content
-  p:first-child {
+  .content h2 {
   margin-bottom: 30px;
 }
 .call-to-action-slider-container
   .call-to-action-slider
   .slide
-  .content
-  p:nth-child(2) {
+  .content p {
   margin-bottom: 12px;
 }
-.call-to-action-slider-container .call-to-action-slider .slide .content p {
+.call-to-action-slider-container .call-to-action-slider .slide .content p, .call-to-action-slider-container .call-to-action-slider .slide .content h2 {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: normal;
