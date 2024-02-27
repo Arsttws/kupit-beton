@@ -159,6 +159,7 @@ function handleTouchMove(e) {
 
 document.querySelector(".hamburger").addEventListener("click", () => {
   document.querySelector(".navigation").classList.toggle("active");
+  document.querySelector(".hamburger").classList.toggle("active");
 });
 document.querySelector(".nav-concrete").addEventListener("click", () => {
   document.getElementById("concrete-list").classList.toggle("active");
