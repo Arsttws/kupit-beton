@@ -174,5 +174,12 @@ document.getElementById("on-gravel").addEventListener("click", () => {
 document.getElementById("on-crushed").addEventListener("click", () => {
   document.getElementById("crushed-third").classList.toggle("active");
   document.getElementById("on-crushed").classList.toggle("active");
-
 });
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 400) {
+    document.querySelector('.scroll-to-top').classList.add('active')
+  } else {
+    document.querySelector('.scroll-to-top').classList.remove('active')
+  }
+})

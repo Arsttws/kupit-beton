@@ -44,19 +44,27 @@ ul li {
   margin: 0 auto;
 }
 .scroll-to-top {
+  opacity: 0;
   position: fixed;
-  z-index: 9999;
   background: var(--light-yellow);
   border-radius: 5px;
   width: 45px;
   height: 45px;
   align-items: center;
   display: flex;
-  right: 20px;
+  right: 60px;
   bottom: 20px;
   box-shadow: 0 0 10px 5px #c2c2c279;
+  z-index: -99;
+  transition: .3s;
 }
-.scroll-to-top:hover {
+.scroll-to-top.active {
+  opacity: 1;
+  z-index: 9999;
+  right: 20px;
+
+}
+.scroll-to-top.active:hover {
   background: #ecbd00;
 }
 .scroll-to-top img {
@@ -205,6 +213,10 @@ header .bottom-header nav {
 header .bottom-header nav .main-item {
   cursor: pointer;
   padding: 10px 20px;
+  color: var(--dark-blue);
+}
+header .bottom-header nav .main-item a{
+  color: var(--dark-blue);
 }
 header .bottom-header nav .main-item .link {
   display: flex;
@@ -217,7 +229,7 @@ header .bottom-header nav .main-item:hover > .link img {
 transform: rotate(180deg);
 }
 header .bottom-header nav .main-item img {
-  width: 14px;
+  width: 10px;
   /* margin-left: 20px; */
 }
 header .bottom-header nav .main-item:hover .nav-link {
@@ -285,6 +297,9 @@ header .bottom-header nav .item .third-level-list span {
 }
 header .bottom-header nav .item:hover > .second-level-list {
   display: flex;
+}
+header .bottom-header nav .main-item .sub-link img{
+  transform: rotate(-90deg);
 }
 header .bottom-header nav .item .item span,
 header .bottom-header nav .item .item a {
@@ -1588,8 +1603,10 @@ color: var(--light-yellow);
   .scroll-to-top {
     width: 40px;
     height: 40px;
-    right: 10px;
     bottom: 10px;
+  }
+  .scroll-to-top.active {
+    right: 10px;
   }
   .scroll-to-top img {
     max-width: 13px;
@@ -1693,6 +1710,7 @@ color: var(--light-yellow);
     display: flex;
     width: 100%;
   }
+
   header
     .bottom-header
     nav
@@ -1726,6 +1744,9 @@ color: var(--light-yellow);
   }
   header .bottom-header nav .main-item .sub-link img{
     transition: .3s;
+  }
+  header .bottom-header nav .main-item .sub-link img{
+    transform: rotate(0deg);
   }
   header .bottom-header nav .main-item .sub-link.active img{
     transform: rotate(180deg);
