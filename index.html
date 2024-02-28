@@ -26,84 +26,131 @@
     <meta name="twitter:title" content="Бетон Центр: Купить бетон в Минске с доставкой">
     <meta name="twitter:description" content="Купить бетон любых марок с доставкой по Минску и Минской области. Большой ассортимент и помощь в выборе. Аренда спецтехники Беларусь. Звоните +375(29)750-13-68">
     <meta name="twitter:image" content="https://arsttws.github.io/kupit-beton/src/assets/main-truck-og.jpg">
+
+    <script type="application/ld+json">
+      {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "kupitbeton.by",
+          "image": "https://arsttws.github.io/kupit-beton/src/assets/logo.jpg",
+          "url": "https://arsttws.github.io/kupit-beton/",
+          "telephone": "+375297501368",
+          "email": "info@kupitbeton.by",
+          "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "улица Кирюникова",
+              "addressLocality": "101",
+              "addressRegion": "аг. Щомыслица,",
+              "addressCountry": "BY",
+              "postalCode": "223049"
+          },
+          "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+          },
+          "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "0",
+              "bestRating": "0",
+              "worstRating": "0",
+              "ratingCount": "5"
+          },
+          "priceRange": "0"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.810081,
+            "longitude": 27.463714
+          },
+      }
+  </script>
   </head>
-  <body>
+  <body itemscope itemtype="https://schema.org/ProfessionalService">
     <header>
       <div class="top-header wrapper">
-        <address   class="contact">
+        <address class="contact" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <div class="location item">
             <div class="image">
-              <img src="./src/assets/location.svg" alt="Мы здесь">
+              <img itemprop="photo" src="./src/assets/location.svg" alt="Мы здесь">
             </div>
-            <span>Минск и Минский район</span>
+            <span style="display: none;" itemprop="streetAddress">улица Кирюникова, 101</span>
+            <span style="display: none;" itemprop="addressCountry">Беларусь</span>
+            <span style="display: none;" itemprop="name">БетонЦентр</span>
+            <span itemprop="addressRegion">Минск и Минский район</span>
           </div>
           <div class="phone item">
             <div class="image">
-              <img src="./src/assets/phone.svg" alt="Позвонить">
+              <img itemprop="phone" src="./src/assets/phone.svg" alt="Позвонить">
             </div>
-            <a href="tel:+375297501368">+375 (29) 750-13-68</a>
+            <a href="tel:+375297501368" itemprop="telephone">+375 (29) 750-13-68</a>
+            <span itemprop="email" style="display: none;">info@kupitbeton.by</span>
           </div>
         </address>
-        <a href="tel:+375297501368" class="call-button">Позвонить</a>
+        <div itemprop="reviews" itemscope itemtype="http://schema.org/AggregateRating">
+          <meta itemprop="ratingValue" content="4" /> <meta itemprop="bestRating" content="5">
+        </div>
+        <a href="tel:+375297501368" class="call-button" itemprop="url">Позвонить</a>
+        <span style="display: none;" property="url">https://arsttws.github.io/kupit-beton/<span/>
       </div>
       <div class="bottom-header wrapper">
         <div class="logo-container">
-          <img src="./src/assets/logo.jpg" alt="Лого">
+          <img itemprop="logo" src="./src/assets/logo.jpg" alt="Лого">
         </div>
-        <nav class="navigation">
-          <div class="item main-item">
-            <div class="link nav-concrete">
-              <span class="nav-link ">Бетон </span><img src="./src/assets/arrow.svg" alt=">">
+        <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="navigation">
+          <div itemprop="name" class="item main-item">
+            <div itemprop="name" class="link nav-concrete">
+              <span itemprop="name" class="nav-link">Бетон</span><img itemprop="photo" src="./src/assets/arrow.svg" alt=">">
             </div>
               <div class="second-level-list" id="concrete-list">
-              <div class="item">
-                <a href="/">Собственное производство</a>
-              </div>
-              <div class="item">
-                <span id="on-gravel">На гравии</span>
-                <div class="third-level-list first" id="gravel-third">
-                  <a href="/">Бетон M150</a>
-                  <a href="/">Бетон M200</a>
-                  <a href="/">Бетон M250</a>
-                  <a href="/">Бетон M300</a>
+                <div itemprop="name" class="item">
+                  <a itemprop="url" href="/">Собственное производство</a>
+                </div>
+                <div itemprop="name" class="item">
+                  <span itemprop="name" id="on-gravel">На гравии</span>
+                  <div class="third-level-list first" id="gravel-third">
+                    <a itemprop="url" href="/">Бетон M150</a>
+                    <a itemprop="url" href="/">Бетон M200</a>
+                    <a itemprop="url" href="/">Бетон M250</a>
+                    <a itemprop="url" href="/">Бетон M300</a>
+                  </div>
+                </div>
+                <div itemprop="name" class="item">
+                  <span itemprop="name" id="on-crushed">На щебне</span>
+                  <div itemprop="name" class="third-level-list last" id="crushed-third">
+                    <a itemprop="url" href="/">Бетон M200</a>
+                    <a itemprop="url" href="/">Бетон M250</a>
+                    <a itemprop="url" href="/">Бетон M300</a>
+                    <a itemprop="url" href="/">Бетон M350</a>
+                    <a itemprop="url" href="/">Бетон M400</a>
+                    <a itemprop="url" href="/">Бетон M450</a>
+                    <a itemprop="url" href="/">Бетон M500</a>
+                  </div>
                 </div>
               </div>
-              <div class="item">
-                <span id="on-crushed">На щебне</span>
-                <div class="third-level-list last" id="crushed-third">
-                  <a href="/">Бетон M200</a>
-                  <a href="/">Бетон M250</a>
-                  <a href="/">Бетон M300</a>
-                  <a href="/">Бетон M350</a>
-                  <a href="/">Бетон M400</a>
-                  <a href="/">Бетон M450</a>
-                  <a href="/">Бетон M500</a>
-                </div>
+            </div>
+          <div itemprop="name" class="item main-item">
+            <div itemprop="name" class="link nav-to-rent">            
+              <span itemprop="name" class="nav-link ">Техника в аренду</span>
+              <img itemprop="photo" src="./src/assets/arrow.svg" alt=">">
+            </div>
+            <div itemprop="name" class="second-level-list" id="rent-second-list">
+              <div itemprop="name" class="item">
+                <a itemprop="url" href="/">АвтобетоноСмеситель</a>
+              </div>
+              <div itemprop="name" class="item">
+                <a itemprop="url" href="/">АвтобетоноНасос</a>
+              </div>
+              <div itemprop="name" class="item">
+                <a itemprop="url" href="/">Бетононасос</a>
               </div>
             </div>
           </div>
-          <div class="item main-item">
-            <div class="link nav-to-rent">            
-              <span class="nav-link ">Техника в аренду </span>
-              <img src="./src/assets/arrow.svg" alt=">">
-            </div>
-            <div class="second-level-list" id="rent-second-list">
-              <div class="item">
-                <a href="/">АвтобетоноСмеситель</a>
-              </div>
-              <div class="item">
-                <a href="/">АвтобетоноНасос</a>
-              </div>
-              <div class="item">
-                <a href="/">Бетононасос</a>
-              </div>
-            </div>
+          <div itemprop="name" class="item main-item">
+            <a itemprop="url" class="nav-link">Цены</a>
           </div>
-          <div class="item main-item">
-            <span class="nav-link">Цены</span>
-          </div>
-          <div class="item main-item">
-            <span class="nav-link">Блог</span>
+          <div itemprop="name" class="item main-item">
+            <a itemprop="url" class="nav-link">Блог</a>
           </div>
         </nav>
         <div class="hamburger">
@@ -188,7 +235,7 @@
         </div>
         <div class="text item">
           <div class="info">
-            <p>
+            <p itemprop="description">
               <strong>Уже более 10 лет</strong> осуществляем производство бетона и
               его поставку на строительные объекты различного масштаба города
               Минска и Минского района. Работаем как с физ. лицами, так и
@@ -210,8 +257,8 @@
             </p>
           </div>
           <div class="call-to-action">
-            <a href="tel:+375297501368" class="phone-number">+375 (29) 750-13-68</a>
-            <a href="tel:+375297501368" class="call-button">Позвонить!</a>
+            <a itemprop="url" href="tel:+375297501368" class="phone-number">+375 (29) 750-13-68</a>
+            <a itemprop="url" href="tel:+375297501368" class="call-button">Позвонить!</a>
             <button class="online-request">Онлайн-запрос</button>
           </div>
         </div>
@@ -228,15 +275,15 @@
               <p>Бетон на <span>щебне</span> , марок:</p>
               <ul>
                 <li>
-                  <a href="/">М200 &nbsp; </a> и <a href="/"> &nbsp; М250</a>
+                  <a itemprop="url" href="/">М200 &nbsp; </a> и <a itemprop="url" href="/"> &nbsp; М250</a>
                 </li>
                 <li>
-                  <a href="/">М300 &nbsp; </a> и <a href="/"> &nbsp; М350</a>
+                  <a itemprop="url" href="/">М300 &nbsp; </a> и <a itemprop="url" href="/"> &nbsp; М350</a>
                 </li>
                 <li>
-                  <a href="/">М400 &nbsp; </a> и <a href="/"> &nbsp; М450</a>
+                  <a itemprop="url" href="/">М400 &nbsp; </a> и <a itemprop="url" href="/"> &nbsp; М450</a>
                 </li>
-                <li><a href="/">М500</a></li>
+                <li><a itemprop="url" href="/">М500</a></li>
               </ul>
               <p>Гарантированное качество. Полное соответствие ГОСТ.</p>
             </div>
@@ -247,16 +294,16 @@
               <p>Бетон на <span>гравии</span> , марок:</p>
               <ul>
                 <li>
-                  <a href="/">М150 &nbsp; </a>
+                  <a itemprop="url" href="/">М150 &nbsp; </a>
                 </li>
                 <li>
-                  <a href="/">М200 &nbsp; </a>
+                  <a itemprop="url" href="/">М200 &nbsp; </a>
                 </li>
                 <li>
-                  <a href="/">М250 &nbsp; </a>
+                  <a itemprop="url" href="/">М250 &nbsp; </a>
                 </li>
                 <li>
-                  <a href="/">М300 &nbsp; </a>
+                  <a itemprop="url" href="/">М300 &nbsp; </a>
                 </li>
               </ul>
               <p>Только качественный бетон. Соблюдены все ГОСТ.</p>
@@ -271,10 +318,10 @@
               <p>Аренда спец. техники <span>с оператором</span></p>
               <ul>
                 <li>
-                  <a href="/">АвтобетоноНасосы</a>
+                  <a itemprop="url" href="/">АвтобетоноНасосы</a>
                 </li>
                 <li>
-                  <a href="/">АвтобетоноСмесители (Миксеры)</a>
+                  <a itemprop="url" href="/">АвтобетоноСмесители (Миксеры)</a>
                 </li>
               </ul>
               <p>
@@ -289,7 +336,7 @@
               <p>Аренда спец. техники <span>без оператора</span></p>
               <ul>
                 <li>
-                  <a href="/">Стационарные бетононасосы</a>
+                  <a itemprop="url" href="/">Стационарные бетононасосы</a>
                 </li>
               </ul>
               <p>Putzmeister BSA 1409 D — экономичное и эффективное решение!</p>
@@ -372,22 +419,22 @@
       <ul class="logo-slider">
         <li class="logo-slide">
           <div class="logo-img">
-            <img src="./src/assets/onega.png" alt="Онега">
+            <img src="./src/assets/onega.svg" alt="Онега">
           </div>
         </li>
         <li class="logo-slide">
           <div class="logo-img">
-            <img src="./src/assets/subway.png" alt="Метро">
+            <img src="./src/assets/subway.svg" alt="Метро">
           </div>
         </li>
         <li class="logo-slide">
           <div class="logo-img">
-            <img src="./src/assets/momo.png" alt="Момо">
+            <img src="./src/assets/momo.svg" alt="Момо">
           </div>
         </li>
         <li class="logo-slide">
           <div class="logo-img">
-            <img src="./src/assets/bank.png" alt="Банк">
+            <img src="./src/assets/bank.svg" alt="Банк">
           </div>
         </li>
       </ul>
@@ -401,8 +448,8 @@
             <h2>Главная и единственная наша задача - довольный заказчик</h2>
             <p>Есть вопросы? Мы на связи:</p>
             <div class="call-to-action">
-              <a href="tel:+375297501368" class="phone-number">+375 (29) 750-13-68</a>
-              <a href="tel:+375297501368" class="call-button">Позвонить!</a>
+              <a itemprop="url" href="tel:+375297501368" class="phone-number">+375 (29) 750-13-68</a>
+              <a itemprop="url" href="tel:+375297501368" class="call-button">Позвонить!</a>
               <button class="online-request">Онлайн-запрос</button>
             </div>
           </div>
@@ -419,7 +466,7 @@
             при производстве.
           </p>
           <div class="call-to-action">
-            <a href="tel:+375297501368" class="call-button">Позвонить!</a>
+            <a itemprop="url" href="tel:+375297501368" class="call-button">Позвонить!</a>
             <button class="online-request">Онлайн-запрос</button>
           </div>
         </div>
@@ -579,7 +626,7 @@
         </section>
       </div>
     </section>
-    <article class="blog wrapper">
+    <article  class="blog wrapper">
       <div class="head">
         <h2>БЛОГ</h2>
         <p>
@@ -588,48 +635,48 @@
           полезной информации. Мы собрали для Вас немного интересной и надеемся
           полезной информации.
         </p>
-        <a href="/">Больше статей</a>
+        <a itemprop="url" href="/">Больше статей</a>
       </div>
-      <div class="posts">
-        <div class="item">
-          <a href="/">
-            <img src="./src/assets/shipment-minsk.webp" alt="Бетон с доставкой по Минску и району">
+      <div itemscope itemtype="http://schema.org/Article" class="posts">
+        <div itemprop="articleBody" class="item">
+          <a itemprop="url" href="/">
+            <img itemprop="image" src="./src/assets/shipment-minsk.webp" alt="Бетон с доставкой по Минску и району">
           </a>
           <div class="content">
             <div class="date">
               <img src="./src/assets/clock.svg" alt="Дата">
-              <p>Ноя 26</p>
+              <time itemprop="datePublished" datetime="2023-11-26">Ноя 26</time>
             </div>
-            <a href="/">Бетон с доставкой по Минску и району</a>
-            <p>
+            <a itemprop="headline" href="/">Бетон с доставкой по Минску и району</a>
+            <p itemprop="text">
               Что мы знаем о бетоне? Бетон является наиболее часто используемым…
             </p>
           </div>
         </div>
-        <div class="item">
-          <a href="/">
-            <img src="./src/assets/shipment-district.webp" alt="Бетон с доставкой по Минску и району">
+        <div itemprop="articleBody" class="item">
+          <a itemprop="url" href="/">
+            <img itemprop="image" src="./src/assets/shipment-district.webp" alt="Бетон с доставкой по Минску и району">
           </a>
           <div class="content">
             <div class="date">
               <img src="./src/assets/clock.svg" alt="Дата">
-              <p>Апр 16</p>
+              <time itemprop="datePublished" datetime="2023-04-16">Апр 16</time>
             </div>
-            <a href="/">Доставка бетона по Минскому району</a>
-            <p>Доставка бетона по Минскому району и г. Минску — это…</p>
+            <a itemprop="headline" href="/">Доставка бетона по Минскому району</a>
+            <p itemprop="text">Доставка бетона по Минскому району и г. Минску — это…</p>
           </div>
         </div>
-        <div class="item">
-          <a href="/">
-            <img src="./src/assets/mall.webp" alt="Бетон с доставкой по Минску и району">
+        <div itemprop="articleBody" class="item">
+          <a itemprop="url" href="/">
+            <img itemprop="image" src="./src/assets/mall.webp" alt="Бетон с доставкой по Минску и району">
           </a>
           <div class="content">
             <div class="date">
               <img src="./src/assets/clock.svg" alt="Дата">
-              <p>Янв 07</p>
+              <time itemprop="datePublished" datetime="2023-01-07">Янв 07</time>
             </div>
-            <a href="/">Методы проведения бетонных работ зимой</a>
-            <p>
+            <a itemprop="headline" href="/">Методы проведения бетонных работ зимой</a>
+            <p itemprop="text">
               Проведение бетонных работ в холодное время года крайне усложнено.
               Кроме…
             </p>
