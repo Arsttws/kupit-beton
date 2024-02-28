@@ -291,7 +291,11 @@ header .bottom-header nav .item .item a {
   font-weight: 400;
   font-size: 13px;
 }
-header .bottom-header nav .item .item:hover span,
+header .bottom-header nav .item .item .sub-link{
+  display: flex;
+}
+header .bottom-header nav .item .item:hover .sub-link,
+header .bottom-header nav .item .item:hover .sub-link span,
 header .bottom-header nav .item .item a:hover {
   background: var(--light-yellow);
   color: var(--white);
@@ -324,6 +328,7 @@ header
   height: 100%;
   max-height: 820px;
   min-height: 500px;
+  overflow-x: hidden;
 }
 .slider-container .slider .slide img {
   width: 100%;
@@ -1360,6 +1365,92 @@ header
   letter-spacing: 0.1px;
 }
 
+/* ==================== footer ====================== */
+
+footer{
+  background: var(--dark-blue);
+  width: 100%;
+  padding: 50px 0;
+} 
+footer h3{
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+footer h3::after{
+  content: '';
+  display: flex;
+  width: 34px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--light-yellow);
+  margin-top: 2px;
+}
+footer h3:hover::after{
+animation: headlineUnderline34px;
+animation-duration: .4s;
+}
+
+footer .wrapper{
+  display: flex;
+  max-width: 1150px;
+  gap: 40px;
+}
+footer .wrapper .left{
+width: 100%;
+  max-width: 55%;
+}
+footer .wrapper .left .text p{
+color: var(--white);
+font-size: 16px;
+line-height: 1.8em;
+}
+footer .wrapper .left .text p:last-child{
+margin-top: 20px;
+}
+footer .wrapper .left .action{
+  margin-top: 100px;
+display: flex;
+gap: 60px;
+  }
+footer .wrapper .left .action .contacts{
+display: flex;
+flex-direction: column;
+  }
+footer .wrapper .left .action .contacts span, footer .wrapper .left .action .contacts span a{
+text-decoration: none;
+color: var(--white);
+font-family: 'Roboto', sans-serif;
+transition: .2s;
+  }
+footer .wrapper .left .action .contacts span{
+padding: 5px 0;
+}
+footer .wrapper .left .action .contacts span a:hover{
+color: var(--light-yellow);
+  }
+footer .wrapper .right{
+display: flex;
+gap: 60px;
+}
+footer .wrapper .right .list{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+footer .wrapper .right .list a{
+padding: 10px 0;
+}
+footer .wrapper .right a{
+text-decoration: none;
+color: var(--white);
+font-family: 'Roboto', sans-serif;
+}
+footer .wrapper .right a:hover{
+color: var(--light-yellow);
+}
 /* ==================== media-screen ====================== */
 @media screen and (max-width: 1600px) {
   .slider-container .slider .slide .content {
@@ -1410,6 +1501,10 @@ header
   .logo-slider-wrapper .logo-slider {
     grid-auto-columns: calc((100% / 3) - 30px);
     gap: 30px;
+  }
+
+  footer .wrapper{
+    max-width: 90%;
   }
 }
 
@@ -1585,6 +1680,15 @@ header
   header .bottom-header nav .item:hover > .second-level-list {
     display: none;
   }
+  header
+  .bottom-header
+  nav
+  .item
+  .second-level-list
+  .item:hover
+  > .third-level-list {
+  display: none;
+}
   header .bottom-header nav .item .second-level-list.active {
     display: flex;
     width: 100%;
@@ -1617,6 +1721,15 @@ header
     display: flex;
     align-items: center;
   }
+  header .bottom-header nav .main-item img{
+    margin-right: 10px;
+  }
+  header .bottom-header nav .main-item .sub-link img{
+    transition: .3s;
+  }
+  header .bottom-header nav .main-item .sub-link.active img{
+    transform: rotate(180deg);
+  }
   /* header .bottom-header nav .item .item:hover span,
   header .bottom-header nav .item .item a:hover {
     background: var(--light-yellow);
@@ -1632,6 +1745,18 @@ header
 @media screen and (max-width: 870px) {
   .slider-container .slider .slide .content {
     font-size: 48px;
+  }
+  footer .wrapper{
+    flex-direction: column-reverse;
+  }
+  footer .wrapper .left{
+    max-width: unset;
+  }
+  footer .wrapper .right{
+    gap: 20%;
+  }
+  footer .wrapper .left .action{
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1907,6 +2032,10 @@ header
     a {
     font-size: 16px;
   }
+
+  footer .wrapper .right{
+    gap: 20px;
+  }
 }
 @media screen and (max-width: 480px) {
   .slider-container .slider .slide .content {
@@ -1939,6 +2068,19 @@ header
     .call-to-action
     .phone-number {
     font-size: 28px;
+  }
+  footer h3{
+    margin-bottom: 10px;
+  }
+  footer .wrapper .right .list a{
+    padding: 2px 0;
+  }
+  footer .wrapper .right{
+    flex-direction: column;
+  }
+  footer .wrapper .left .action{
+    flex-direction: column;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 442px) {

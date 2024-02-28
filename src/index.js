@@ -169,7 +169,10 @@ document.querySelector(".nav-to-rent").addEventListener("click", () => {
 });
 document.getElementById("on-gravel").addEventListener("click", () => {
   document.getElementById("gravel-third").classList.toggle("active");
+  document.getElementById("on-gravel").classList.toggle("active");
 });
 document.getElementById("on-crushed").addEventListener("click", () => {
   document.getElementById("crushed-third").classList.toggle("active");
+  document.getElementById("on-crushed").classList.toggle("active");
+
 });
