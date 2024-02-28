@@ -81,13 +81,17 @@ ul li {
   color: var(--white);
   border-radius: 5px;
   background: var(--yellow);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 .call-to-action .call-button:hover {
-  background: var(--white);
-  color: var(--yellow);
-  font-weight: 500;
-  outline: 1px solid var(--yellow);
+  /* background: var(--white); */
+  /* color: var(--yellow); */
+  /* font-weight: 500; */
+  /* outline: 1px solid var(--yellow); */
+  background: #eb9310;
+  transform: scale(1.005);
+  font-size: 110%;
+  box-shadow:0 0 12px rgba(167, 167, 167, 0.493) ;
 }
 .call-to-action .online-request {
   border: none;
@@ -103,10 +107,15 @@ ul li {
   transition: all 0.2s ease;
 }
 .call-to-action .online-request:hover {
-  background: var(--white);
+  /* background: var(--white);
   color: var(--light-blue);
   outline: 1px solid var(--light-blue);
-  font-weight: 500;
+  font-weight: 500; */
+
+  background: #0074ad;
+  transform: scale(1.005);
+  font-size: 110%;
+  box-shadow:0 0 12px rgba(167, 167, 167, 0.493) ;
 }
 
 /* =========================== header =========================== */
@@ -200,9 +209,12 @@ header .bottom-header nav .main-item {
 header .bottom-header nav .main-item .link {
   display: flex;
 }
-header .bottom-header nav .main-item .link:hover > img {
+header .bottom-header nav .main-item .link img{
+  transition: .3s;
+
+}
+header .bottom-header nav .main-item:hover > .link img {
 transform: rotate(180deg);
-transition: .3s;
 }
 header .bottom-header nav .main-item img {
   width: 14px;
@@ -317,7 +329,20 @@ header
   width: 100%;
   position: relative;
   object-fit: cover;
+  animation: mainScreenImage;
+  animation-duration: 1s;
+  transition: ease;
 }
+
+@keyframes mainScreenImage {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
 .slider-container .slider .slide .img-cover {
   width: 100%;
   height: 100%;
@@ -338,7 +363,19 @@ header
   font-size: 80px;
   font-weight: 700;
   color: var(--white);
+  animation: mainScreenContent;
+  animation-duration: 1s;
 }
+
+@keyframes mainScreenContent {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
 .slider-container .slider .slide .content h2 span {
   color: var(--yellow);
 }
@@ -1294,8 +1331,9 @@ header
   margin-bottom: 25px;
   display: flex;
 }
-.blog .posts .item .content .date p {
+.blog .posts .item .content .date time {
   color: #9a9a9a;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 .blog .posts .item .content .date img {
