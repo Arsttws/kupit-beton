@@ -96,16 +96,18 @@
           <img itemprop="logo" src="./src/assets/logo.jpg" alt="Лого">
         </div>
         <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="navigation">
-          <div itemprop="name" class="item main-item">
-            <div itemprop="name" class="link nav-concrete">
-              <span itemprop="name" class="nav-link">Бетон</span><img itemprop="photo" src="./src/assets/arrow.svg" alt=">">
+          <div class="item main-item">
+            <div class="link nav-concrete">
+              <span class="nav-link">Бетон</span><img itemprop="photo" src="./src/assets/arrow.svg" alt=">">
             </div>
               <div class="second-level-list" id="concrete-list">
-                <div itemprop="name" class="item">
+                <div class="item">
                   <a itemprop="url" href="/">Собственное производство</a>
                 </div>
-                <div itemprop="name" class="item">
-                  <span itemprop="name" id="on-gravel">На гравии</span>
+                <div class="item">
+                  <div id="on-gravel" class="sub-link">
+                    <span>На гравии</span><img src="./src/assets/arrow-white.svg" alt=">">
+                  </div>
                   <div class="third-level-list first" id="gravel-third">
                     <a itemprop="url" href="/">Бетон M150</a>
                     <a itemprop="url" href="/">Бетон M200</a>
@@ -113,9 +115,12 @@
                     <a itemprop="url" href="/">Бетон M300</a>
                   </div>
                 </div>
-                <div itemprop="name" class="item">
-                  <span itemprop="name" id="on-crushed">На щебне</span>
-                  <div itemprop="name" class="third-level-list last" id="crushed-third">
+                <div class="item">
+                  <div id="on-crushed" class="sub-link">
+                    <span ">На щебне</span><img src="./src/assets/arrow-white.svg" alt=">">
+                  </div>
+                  
+                  <div class="third-level-list last" id="crushed-third">
                     <a itemprop="url" href="/">Бетон M200</a>
                     <a itemprop="url" href="/">Бетон M250</a>
                     <a itemprop="url" href="/">Бетон M300</a>
@@ -127,27 +132,27 @@
                 </div>
               </div>
             </div>
-          <div itemprop="name" class="item main-item">
-            <div itemprop="name" class="link nav-to-rent">            
-              <span itemprop="name" class="nav-link ">Техника в аренду</span>
+          <div class="item main-item">
+            <div class="link nav-to-rent">            
+              <span class="nav-link ">Техника в аренду</span>
               <img itemprop="photo" src="./src/assets/arrow.svg" alt=">">
             </div>
-            <div itemprop="name" class="second-level-list" id="rent-second-list">
-              <div itemprop="name" class="item">
+            <div class="second-level-list" id="rent-second-list">
+              <div class="item">
                 <a itemprop="url" href="/">АвтобетоноСмеситель</a>
               </div>
-              <div itemprop="name" class="item">
+              <div class="item">
                 <a itemprop="url" href="/">АвтобетоноНасос</a>
               </div>
-              <div itemprop="name" class="item">
+              <div class="item">
                 <a itemprop="url" href="/">Бетононасос</a>
               </div>
             </div>
           </div>
-          <div itemprop="name" class="item main-item">
+          <div class="item main-item">
             <a itemprop="url" class="nav-link">Цены</a>
           </div>
-          <div itemprop="name" class="item main-item">
+          <div class="item main-item">
             <a itemprop="url" class="nav-link">Блог</a>
           </div>
         </nav>
@@ -649,7 +654,7 @@
             <p itemprop="text">
               Что мы знаем о бетоне? Бетон является наиболее часто используемым…
             </p>
-            <span itemprop="author">БетонЦентр</span>
+            <span style="display: none;" itemprop="author">БетонЦентр</span>
           </div>
         </div>
         <div itemprop="articleBody" class="item">
@@ -663,7 +668,7 @@
             </div>
             <a itemprop="headline" href="/">Доставка бетона по Минскому району</a>
             <p itemprop="text">Доставка бетона по Минскому району и г. Минску — это…</p>
-            <span itemprop="author">БетонЦентр</span>
+            <span style="display: none;" itemprop="author">БетонЦентр</span>
           </div>
         </div>
         <div itemprop="articleBody" class="item">
@@ -680,14 +685,59 @@
               Проведение бетонных работ в холодное время года крайне усложнено.
               Кроме…
             </p>
-            <span itemprop="author">БетонЦентр</span>
+            <span style="display: none;" itemprop="author">БетонЦентр</span>
           </div>
         </div>
       </div>
     </article>
   </main>
-
+<footer>
+  <div class="wrapper">
+    <div class="left">
+      <div class="text">
+        <h3>Бетон ЦЕНТР</h3>
+        <p>ЧСУП "СпецАвтоЛэнд" - производство, доставка, заливка бетона. Аренда бетононасосов. Работаем 24/7</p>
+        <p>улица Кирюникова, 101, Щомыслица, Минский район</p>
+      </div>
+      <div class="action">
+        <div class="contacts">
+          <h3>КОНТАКТЫ</h3>
+          <span>Тел: <a href="tel:+375297501368">+375 (29) 750-13-68</a></span>
+          <span>Почта: <a href="mailto:info@kupitbeton.by">info@kupitbeton.by</a></span>
+        </div>
+        <div class="share">
+          <h3>ПОДЕЛИТЬСЯ</h3>
+          <div class="items">
+            <div class="ya-share2" data-curtain data-services="vkontakte,odnoklassniki,telegram,twitter,viber,moimir"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="technique">
+        <h3>ТЕХНИКА В АРЕНДУ</h3>
+        <div class="list">
+          <a href="/">Бетононасосы</a>
+          <a href="/">Цены</a>
+        </div>
+      </div>
+      <div class="concrete">
+        <h3>БЕТОН НА ЩЕБНЕ</h3>
+        <div class="list">
+          <a href="/">М200</a>
+          <a href="/">М250</a>
+          <a href="/">М300</a>
+          <a href="/">М350</a>
+          <a href="/">М400</a>
+          <a href="/">М450</a>
+          <a href="/">М500</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
     <a href="#" class="scroll-to-top"><img src="./src/assets/top-arrow.svg" alt="Наверх"></a>
-      <script src="./src/index.js"></script>
-    </body>
+    <script src="./src/index.js"></script>
+    <script src="https://yastatic.net/share2/share.js"></script>
+  </body>
 </html>
