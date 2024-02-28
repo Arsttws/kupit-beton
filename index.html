@@ -57,18 +57,20 @@
               "worstRating": "0",
               "ratingCount": "5"
           },
-          "priceRange": "0"
+          "priceRange": "0",
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 53.810081,
-            "longitude": 27.463714
-          },
+            "latitude": "53.810081",
+            "longitude": "27.463714"
+          }
       }
   </script>
   </head>
-  <body itemscope itemtype="https://schema.org/ProfessionalService">
+  <body >
     <header>
-      <div class="top-header wrapper">
+      <div class="top-header wrapper" itemscope itemtype="https://schema.org/Organization">
+        <span style="display: none;" itemprop="name">БетонЦентр</span>
+        <img itemprop="image" style="display: none;" src="./src/assets/logo.jpg" alt="logo">
         <address class="contact" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <div class="location item">
             <div class="image">
@@ -76,21 +78,17 @@
             </div>
             <span style="display: none;" itemprop="streetAddress">улица Кирюникова, 101</span>
             <span style="display: none;" itemprop="addressCountry">Беларусь</span>
-            <span style="display: none;" itemprop="name">БетонЦентр</span>
             <span itemprop="addressRegion">Минск и Минский район</span>
           </div>
           <div class="phone item">
             <div class="image">
-              <img itemprop="phone" src="./src/assets/phone.svg" alt="Позвонить">
+              <img itemprop="photo" src="./src/assets/phone.svg" alt="Позвонить">
             </div>
-            <a href="tel:+375297501368" itemprop="telephone">+375 (29) 750-13-68</a>
+            <a itemprop="telephone" href="tel:+375297501368" >+375 (29) 750-13-68</a>
             <span itemprop="email" style="display: none;">info@kupitbeton.by</span>
           </div>
         </address>
-        <div itemprop="reviews" itemscope itemtype="http://schema.org/AggregateRating">
-          <meta itemprop="ratingValue" content="4" /> <meta itemprop="bestRating" content="5">
-        </div>
-        <a href="tel:+375297501368" class="call-button" itemprop="url">Позвонить</a>
+        <a href="tel:+375297501368" class="call-button" itemprop="action">Позвонить</a>
         <span style="display: none;" property="url">https://arsttws.github.io/kupit-beton/<span/>
       </div>
       <div class="bottom-header wrapper">
@@ -645,12 +643,13 @@
           <div class="content">
             <div class="date">
               <img src="./src/assets/clock.svg" alt="Дата">
-              <time itemprop="datePublished" datetime="2023-11-26">Ноя 26</time>
+              <time itemprop="datePublished" content="2023-11-26T08:00:00+03:00">Ноя 26</time>
             </div>
             <a itemprop="headline" href="/">Бетон с доставкой по Минску и району</a>
             <p itemprop="text">
               Что мы знаем о бетоне? Бетон является наиболее часто используемым…
             </p>
+            <span itemprop="author">БетонЦентр</span>
           </div>
         </div>
         <div itemprop="articleBody" class="item">
@@ -660,10 +659,11 @@
           <div class="content">
             <div class="date">
               <img src="./src/assets/clock.svg" alt="Дата">
-              <time itemprop="datePublished" datetime="2023-04-16">Апр 16</time>
+              <time itemprop="datePublished" content="2023-04-16T08:00:00+03:00">Апр 16</time>
             </div>
             <a itemprop="headline" href="/">Доставка бетона по Минскому району</a>
             <p itemprop="text">Доставка бетона по Минскому району и г. Минску — это…</p>
+            <span itemprop="author">БетонЦентр</span>
           </div>
         </div>
         <div itemprop="articleBody" class="item">
@@ -673,13 +673,14 @@
           <div class="content">
             <div class="date">
               <img src="./src/assets/clock.svg" alt="Дата">
-              <time itemprop="datePublished" datetime="2023-01-07">Янв 07</time>
+              <time itemprop="datePublished" content="2023-01-07T08:00:00+03:00">Янв 07</time>
             </div>
             <a itemprop="headline" href="/">Методы проведения бетонных работ зимой</a>
             <p itemprop="text">
               Проведение бетонных работ в холодное время года крайне усложнено.
               Кроме…
             </p>
+            <span itemprop="author">БетонЦентр</span>
           </div>
         </div>
       </div>
