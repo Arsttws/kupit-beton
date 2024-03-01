@@ -1,0 +1,75 @@
+.slider-container .slider .slide .content{
+top: 55%;
+}
+.slider-container .slider .slide .content .wrapper{
+    max-width: 1170px;
+    text-align-last: left;
+}
+.slider-container .slider .slide .content .wrapper h1{
+    font-size: 32px;
+    text-align-last: left;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+.slider-container .slider .slide .content .wrapper h1::after{
+display: none;  
+}
+.slider-container .slider .slide .content .wrapper .breadcrumbs{
+display: flex;
+}
+.slider-container .slider .slide .content .wrapper .breadcrumbs a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+.slider-container .slider .slide .content .wrapper .breadcrumbs a:hover{
+    color: var(--yellow);
+}
+.slider-container .slider .slide .content .wrapper .breadcrumbs a.active{
+color: var(--yellow);
+}
+.slider-container{
+    margin-bottom: 100px;
+}
+.post.wrapper{
+    max-width: 1170px;
+    margin-bottom: 100px;
+}
+.post.wrapper .post-text{
+margin-top: 60px;
+}
+.post.wrapper .post-text h2{
+text-align-last: left;
+margin-bottom: 5px;
+}
+.post.wrapper .post-text h2::after{
+    display: none;
+}
+.post.wrapper .post-text p{
+text-align: justify;
+font-size: 16px;
+margin-bottom: 40px;
+line-height: 1.6em;
+}
+.post.wrapper .post-text a{
+text-decoration: none;
+color: var(--light-blue);
+}
+.post.wrapper .post-text a:hover{
+color: var(--light-blue-hover);
+}
+.post .post-content{
+    max-width: 900px;
+}
+.post .post-content .post-cover{
+    width: 100%;
+}
+.post .post-content .post-cover img{
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+}

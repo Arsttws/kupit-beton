@@ -1,6 +1,6 @@
-const wrapper = document.querySelector(".logo-slider-wrapper");
-const slider = document.querySelector(".logo-slider");
-const firstslideWidth = slider.querySelector(".logo-slide").offsetWidth;
+const wrapper = document.querySelector(".photo-slider-wrapper");
+const slider = document.querySelector(".photo-slider");
+const firstslideWidth = slider.querySelector(".photo-slide").offsetWidth;
 const sliderChildrens = [...slider.children];
 let isDragging = false,
   isAutoPlay = true,
@@ -66,96 +66,6 @@ slider.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
-// const bubles = document.querySelector(".video-bubles");
-// const bubleItem = document.querySelectorAll(".video-bubles > .item");
-// const video = document.querySelectorAll(".videos > .video");
-// bubles.addEventListener("click", (e) => {
-//   if (e.target.closest(".item")) {
-//     const buble = e.target.closest(".item");
-//     const video = e.target.closest(".video");
-
-//     bubleItem.forEach((e) => {
-//       e.classList.remove("active");
-//     });
-//     buble.classList.add("active");
-//     video.classList.add("active");
-//   }
-// });
-
-const videoSlider = document.querySelector(".videos");
-const videosContainer = document.querySelector(".videos-container");
-const bubles = document.querySelectorAll(".video-bubles > .item");
-
-let i = 1;
-
-function slideVideo(id) {
-  videosContainer.style.left = -100 * id + "%";
-
-  bubles.forEach((buble) => {
-    buble.classList.remove("active");
-  });
-
-  bubles[id].classList.add("active");
-}
-
-for (let j = 0; j < bubles.length; j++) {
-  bubles[j].addEventListener("click", () => {
-    slideVideo(j);
-    i = j + 1;
-  });
-}
-
-// const video = document.querySelectorAll(".videos-container > .video");
-videosContainer.addEventListener("touchstart", handleTouchStart, false);
-videosContainer.addEventListener("touchmove", handleTouchMove, false);
-
-let x1 = null;
-const maxLeft = "-200%";
-
-function handleTouchStart(e) {
-  const firstTouch = e.touches[0];
-  x1 = firstTouch.clientX;
-}
-
-function handleTouchMove(e) {
-  if (!x1) return false;
-  let x2 = e.touches[0].clientX;
-
-  let difference = x2 - x1;
-  console.log(difference);
-
-  if (difference > 5) {
-    i--;
-    if (videosContainer.style.left === "0%") {
-      console.log(videosContainer.style.left);
-
-      i = 1;
-    }
-    videosContainer.style.left = -100 * (i - 1) + "%";
-    console.log(i);
-    // i++;
-    bubles.forEach((buble) => {
-      buble.classList.remove("active");
-    });
-
-    bubles[i - 1].classList.add("active");
-  } else if (difference < -5) {
-    i++;
-    if (videosContainer.style.left === maxLeft) {
-      i = 3;
-    }
-    videosContainer.style.left = -100 * (i - 1) + "%";
-    // i++;
-    console.log(i);
-    bubles.forEach((buble) => {
-      buble.classList.remove("active");
-    });
-
-    bubles[i - 1].classList.add("active");
-  }
-
-  x1 = null;
-}
 
 document.querySelector(".hamburger").addEventListener("click", () => {
   document.querySelector(".navigation").classList.toggle("active");
