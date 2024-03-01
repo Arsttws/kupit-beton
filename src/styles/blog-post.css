@@ -73,3 +73,23 @@ color: var(--light-blue-hover);
     object-fit: cover;
     display: flex;
 }
+
+@media screen and (max-width: 1180px) {
+    .slider-container .slider .slide .content .wrapper{
+        max-width: 970px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1020px){
+    .slider-container .slider .slide {
+        min-height: unset;
+        height: 480px;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .slider-container .slider .slide .content{
+        top: 40%;
+    }
+    .slider-container .slider .slide .content .wrapper{
+        max-width: 90%;
+    }
+}
