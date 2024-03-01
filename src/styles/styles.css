@@ -1,55 +1,55 @@
 @font-face {
   font-family: "Oswald";
-  src: url(/src/fonts/Oswald/Oswald-Regular.ttf);
+  src: url(../fonts/Oswald/Oswald-Regular.ttf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url(/src/fonts/Oswald/Oswald-SemiBold.ttf);
+  src: url(../fonts/Oswald/Oswald-SemiBold.ttf);
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url(/src/fonts/Oswald/Oswald-Bold.ttf);
+  src: url(../fonts/Oswald/Oswald-Bold.ttf);
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url(/src/fonts/Oswald/Oswald-Bold.ttf);
+  src: url(../fonts/Oswald/Oswald-Bold.ttf);
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/src/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/src/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/src/fonts/Roboto/Roboto-Medium.ttf);
+  src: url(../fonts/Roboto/Roboto-Medium.ttf);
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(/src/fonts/Roboto/Roboto-Bold.ttf);
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -496,12 +496,16 @@ header
   position: absolute;
   width: 100%;
   top: 40%;
+
+  animation: mainScreenContent;
+  animation-duration: 1s;
+}
+
+.slider-container .slider .slide .content strong{
   text-align: center;
   font-size: 100px;
   font-weight: 700;
   color: var(--white);
-  animation: mainScreenContent;
-  animation-duration: 1s;
 }
 
 .slider-container .slider .slide .content strong span {
@@ -1475,7 +1479,7 @@ font-size: 14px;
 }
 /* ==================== media-screen ====================== */
 @media screen and (max-width: 1600px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 94px;
   }
   .recent .container .shipment p {
@@ -1485,17 +1489,17 @@ font-size: 14px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong {
     font-size: 88px;
   }
 }
 @media screen and (max-width: 1366px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 80px;
   }
 }
 @media screen and (max-width: 1280px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 78px;
   }
   .recent .container .projects .projects-images::-webkit-scrollbar-track {
@@ -1597,7 +1601,7 @@ font-size: 14px;
 }
 
 @media screen and (max-width: 1020px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 90px;
   }
   .recent .container .shipment .videos {
@@ -1770,12 +1774,12 @@ font-size: 14px;
 }
 
 @media screen and (max-width: 940px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 80px;
   }
 }
 @media screen and (max-width: 870px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 70px;
   }
   footer .wrapper{
@@ -1812,7 +1816,7 @@ font-size: 14px;
   }
 
   /* ==================== slider ================ */
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 60px;
   }
   .slider-container .slider .slide .content {
@@ -2046,7 +2050,7 @@ font-size: 14px;
 }
 
 @media screen and (max-width: 540px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 50px;
   }
   .blog .posts {
@@ -2069,7 +2073,7 @@ font-size: 14px;
   }
 }
 @media screen and (max-width: 480px) {
-  .slider-container .slider .slide .content {
+  .slider-container .slider .slide .content strong{
     font-size: 48px;
   }
 

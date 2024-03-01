@@ -26,41 +26,22 @@
 
     <script type="application/ld+json">
       {
-          "@context": "http://schema.org",
-          "@type": "LocalBusiness",
-          "name": "kupitbeton.by",
-          "image": "https://arsttws.github.io/kupit-beton/src/assets/logo.jpg",
-          "url": "https://arsttws.github.io/kupit-beton/",
-          "telephone": "+375297501368",
-          "email": "info@kupitbeton.by",
-          "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "улица Кирюникова",
-              "addressLocality": "101",
-              "addressRegion": "аг. Щомыслица,",
-              "addressCountry": "BY",
-              "postalCode": "223049"
-          },
-          "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-              "opens": "00:00",
-              "closes": "23:59"
-          },
-          "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "0",
-              "bestRating": "0",
-              "worstRating": "0",
-              "ratingCount": "5"
-          },
-          "priceRange": "0",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "53.810081",
-            "longitude": "27.463714"
-          }
-      }
+        "@context": "https://schema.org", 
+        "@type": "BlogPosting",
+        "headline": "Бетон с доставкой по Минску и району | Бетон Центр",
+        "image": "https://arsttws.github.io/kupit-beton/src/assets/mixer-truck.webp",
+        "editor": "Бетон Центр", 
+        "keywords": "Бетон Доставка Купить Минск", 
+        "url": "https://arsttws.github.io/kupit-beton/blog/blog-post",
+        "datePublished": "2024-04-16",
+        "dateCreated": "2024-04-16",
+        "description": "Доставка бетона миксером (автобетоносмесителями) — одно из направлений работы нашей компании. Процесс доставки — сложное мероприятие. Если нарушить правила транспортировки, бетон может прийти в негодность.",
+        "articleBody": "Статья",
+          "author": {
+           "@type": "Person",
+           "name": "Бетон Центр"
+  }
+}
   </script>
   </head>
   <body >
@@ -168,30 +149,30 @@
       </div>
     </header>
     <main>
-      <article>
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide">
-            <img src="../src/assets/blog-img.webp" alt="truck">
-            <div class="img-cover"></div>
-            <div class="content">
-              <div class="wrapper">
-                <h1>Бетон с доставкой по Минску и району | Бетон Центр</h1>
-                <div class="breadcrumbs">
-                  <a href="/">Главная | &nbsp;</a>
-                  <a href="/pages/blog.html">Блог | &nbsp;</a>
-                  <a href="/pages/blog-post.html" class="active">Бетон с доставкой по Минску и району</a>
-                </div>
+      <section class="slider-container">
+        <div class="slider">
+          <div class="slide">
+          <img src="../src/assets/blog-img.webp" alt="truck">
+          <div class="img-cover"></div>
+          <div class="content">
+            <div class="wrapper">
+              <h1>Бетон с доставкой по Минску и району | Бетон Центр</h1>
+              <div class="breadcrumbs">
+                <a href="/">Главная | &nbsp;</a>
+                <a href="/pages/blog.html">Блог | &nbsp;</a>
+                <a href="/pages/blog-post.html" class="active">Бетон с доставкой по Минску и району</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+      <article itemscope itemtype="http://schema.org/Article">
       <div class="buy-in-minsk wrapper">
         <div class="headline">
-          <h1>Купить бетон с доставкой</h1>
+          <h1 itemprop="headline">Купить бетон с доставкой</h1>
         </div>
-        <div class="information">
+        <div class="information" itemprop="articleBody">
           <div class="images item">
             <img src="../src/assets/buy-in-minsk.webp" alt="Купить бетон в Минске с доставкой">
           </div>
@@ -242,7 +223,7 @@
           </div>
         </div>
       </div>
-    <div class="buy-with-mixer wrapper">
+    <div class="buy-with-mixer wrapper" itemprop="articleBody">
       <div class="left">
         <div class="head">
           <h2>Нужно купить бетон с доставкой?</h2>
@@ -314,6 +295,10 @@
         </p>
       </div>
     </div>
+    <meta itemprop="author" content="Бетон Центр">
+    <meta itemprop="datePublished" content="2023-04-16">
+    <meta itemprop="image" content="	https://arsttws.github.io/kupit-beton/src/assets/mixer-truck.webp">
+    <meta itemprop="articleSection" content="Статьи">
   </article>
     <div class="logo-slider-wrapper wrapper">
       <ul class="logo-slider">

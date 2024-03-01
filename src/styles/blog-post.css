@@ -3,11 +3,11 @@ top: 55%;
 }
 .slider-container .slider .slide .content .wrapper{
     max-width: 1170px;
-    text-align-last: left;
+    text-align: left;
 }
 .slider-container .slider .slide .content .wrapper h1{
     font-size: 32px;
-    text-align-last: left;
+    text-align: left;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     color: var(--white);
