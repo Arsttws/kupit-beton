@@ -170,7 +170,6 @@ color: var(--white);
         min-height: unset;
         height: 480px;
     }
-
 }
 @media screen and (max-width: 1020px) {
     .slider-container .slider .slide .content{
