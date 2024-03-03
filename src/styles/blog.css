@@ -14,32 +14,32 @@ h2::after{
         max-width: 1170px;
     }
     .slider-container .slider .slide .content .wrapper h1{
-        font-size: 32px;
-        text-align: left;
-        font-weight: 500;
-        font-family: 'Roboto', sans-serif;
+        font-size: 60px;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Oswald', sans-serif;
         color: var(--white);
         margin-bottom: 10px;
     }
+    /* .slider-container .slider .slide .content .breadcrumbs span{
+        margin: 0;
+    } */
     .slider-container .slider .slide .content .wrapper h1::after{
     display: none;  
     }
-    .slider-container .slider .slide .content .wrapper .breadcrumbs{
-    display: flex;
-    }
-    .slider-container .slider .slide .content .wrapper .breadcrumbs a{
+    /* .slider-container .slider .slide .content .wrapper .breadcrumbs a{
         text-decoration: none;
         color: var(--white);
         font-size: 16px;
         font-family: 'Roboto', sans-serif;
         font-weight: normal;
-    }
-    .slider-container .slider .slide .content .wrapper .breadcrumbs a:hover{
+    } */
+    /* .slider-container .slider .slide .content .wrapper .breadcrumbs a:hover{
         color: var(--yellow);
     }
     .slider-container .slider .slide .content .wrapper .breadcrumbs a.active{
     color: var(--yellow);
-    }
+    } */
     .post.wrapper{
         max-width: 1170px;
         margin-bottom: 100px;
@@ -110,7 +110,7 @@ max-width: calc(50% - 20px);
       }
       .blog .article .item .content .meta {
         display: flex;
-        justify-content: space-between;
+        gap: 20px;
         margin-bottom: 25px;
     }
       .blog .article .item .content .meta div {
@@ -149,6 +149,7 @@ max-width: calc(50% - 20px);
   word-wrap: break-word;
   display: block;
       }
+
 .pagination{
     width: fit-content;
     margin: 0 auto;

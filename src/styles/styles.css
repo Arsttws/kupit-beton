@@ -329,11 +329,11 @@ header .top-header .contact div.item {
   display: flex;
 }
 header .top-header .contact div .image {
-  width: 16px;
+  height:16px;
   margin-right: 10px;
 }
 header .top-header .contact div img {
-  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 header .bottom-header {
@@ -512,7 +512,55 @@ header
   animation: mainScreenContent;
   animation-duration: 1s;
 }
-
+ .slider-container .slider .slide .content .breadcrumbs{
+  margin-top: 20px;
+  color: var(--white);
+}
+ .slider-container .slider .slide .content .breadcrumbs a{
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+}
+ .slider-container .slider .slide .content .breadcrumbs .arrow{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+ .slider-container .slider .slide .content .breadcrumbs a.active{
+  color: var(--yellow);
+}
+/* .slider-container .slider .slide .content .breadcrumbs{
+display: flex;
+width: fit-content;
+margin: 0 auto;
+}
+.slider-container .slider .slide .content .breadcrumbs span{
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 30px auto 0;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+}
+.slider-container .slider .slide .content .breadcrumbs a{
+  text-decoration: none;
+  color: var(--white);
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.slider-container .slider .slide .content .breadcrumbs a:hover{
+  color: var(--yellow);
+}
+.slider-container .slider .slide .content .breadcrumbs a.active{
+color: var(--yellow);
+} */
 .slider-container .slider .slide .content strong{
   font-size: 100px;
   font-weight: 700;
@@ -769,10 +817,10 @@ transform: scale(1.1);
   background: var(--dark-blue);
   cursor: crosshair;
 }
-.concrete-delivery .container .advantages .items .item:hover {
+/* .concrete-delivery .container .advantages .items .item:hover {
   background-image: url(../assets/close-up-construction-site-excavator.jpg);
   background-repeat: no-repeat;
-}
+} */
 .concrete-delivery .container .advantages .items .item h3 {
   font-size: 18px;
   color: var(--yellow);
@@ -1262,19 +1310,19 @@ transform: scale(1.1);
   text-align: center;
   line-height: 1.8em;
 }
-.recent .container .shipment .videos {
+.videos {
   max-width: 900px;
   margin: 0 auto;
   margin-top: 70px;
 }
-.recent .container .shipment .videos .videos-container {
+.videos .videos-container {
   display: flex;
   justify-content: space-between;
 }
-.recent .container .shipment .videos .videos-container .video:last-child {
+.videos .videos-container .video:last-child {
   display: none;
 }
-.recent .container .shipment .videos .videos-container .video video {
+.videos .videos-container .video video {
   width: 320px;
   height: 560px;
   display: flex;
@@ -1352,7 +1400,6 @@ margin: 5px 0 0;
 }
 .blog .posts .item .content .meta {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 25px;
   flex-wrap: wrap;
   gap: 10px;
@@ -1611,12 +1658,12 @@ font-size: 14px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1306px) {
+/* @media (min-width: 768px) and (max-width: 1306px) {
   .concrete-delivery .container .advantages .items .item:hover {
     background-image: url(../assets/close-up-construction-site-excavator-rect.jpg);
     background-repeat: no-repeat;
   }
-}
+} */
 @media (min-width: 768px) and (max-width: 1020px) {
   .slider-container .slider .slide {
     min-height: 660px;
@@ -1627,10 +1674,10 @@ font-size: 14px;
   .slider-container .slider .slide .content strong{
     font-size: 90px;
   }
-  .recent .container .shipment .videos {
+.videos {
     max-width: 700px;
   }
-  .recent .container .shipment .videos .video video {
+.videos .video video {
     width: auto;
     height: 520px;
   }
@@ -1836,7 +1883,7 @@ font-size: 14px;
     margin: 15px auto 0;
   }
   header .bottom-header nav {
-    top: 220px;
+    top: 199px;
   }
 
   /* ==================== slider ================ */
@@ -2020,14 +2067,14 @@ font-size: 14px;
   .recent .container .projects .projects-images .items .item {
     height: 220px;
   }
-  .recent .container .shipment .videos {
+.videos {
     max-width: 320px;
     width: 100%;
     height: 540px;
     position: relative;
     overflow: hidden;
   }
-  .recent .container .shipment .videos .videos-container {
+.videos .videos-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -2037,15 +2084,15 @@ font-size: 14px;
     transition: 0.5s;
     gap: 20px;
   }
-  .recent .container .shipment .videos .videos-container .video {
+.videos .videos-container .video {
     margin: 0 auto;
     display: flex;
     align-items: center;
   }
-  .recent .container .shipment .videos .videos-container .video:last-child {
+.videos .videos-container .video:last-child {
     display: flex;
   }
-  .recent .container .shipment .videos .videos-container .video video {
+.videos .videos-container .video video {
     width: 300px;
     height: 540px;
   }
@@ -2113,16 +2160,23 @@ font-size: 14px;
     width: 1px;
     height: 100%;
     background: #fdcc9e;
+    display: none;
   }
   .bottom-menu .item{
     width: 50%;
     display: flex;
     align-items: center;
   }
+  .bottom-menu .item:first-child{
+    background: var(--light-blue-btn);
+  }
   .bottom-menu .item a{
     margin: 0 auto;
     width: 100%;
-    padding: 14px;
+    padding: 15.5px;
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
     text-align: center;
   }
   .bottom-menu .item a img {
@@ -2188,12 +2242,12 @@ font-size: 14px;
     gap: 30px;
   }
 }
-@media screen and (max-width: 442px) {
+/* @media screen and (max-width: 442px) {
   .concrete-delivery .container .advantages .items .item:hover {
     background-image: url(../assets/close-up-construction-site-excavator-square.jpg);
     background-repeat: no-repeat;
   }
-}
+} */
 @media screen and (max-width: 350px) {
   .photo-slider-wrapper .photo-slider .photo-slide {
     height: 100px;
