@@ -2104,7 +2104,7 @@ font-size: 14px;
     height: 50px;
     width: 100%;
     background: var(--yellow);
-    transition: .6s;
+    transition: .3s;
   }
   .bottom-menu.active{
     margin-bottom: 0;
