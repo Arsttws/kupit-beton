@@ -1,6 +1,6 @@
-// const wrapper = document.querySelector(".photo-slider-wrapper");
-// const slider = document.querySelector(".photo-slider");
-// const firstslideWidth = slider.querySelector(".photo-slide").offsetWidth;
+// const wrapper = document.querySelector(".logo-slider-wrapper");
+// const slider = document.querySelector(".logo-slider");
+// const firstslideWidth = slider.querySelector(".logo-slide").offsetWidth;
 // const sliderChildrens = [...slider.children];
 // let isDragging = false,
 //   isAutoPlay = true,
@@ -65,7 +65,6 @@
 // slider.addEventListener("scroll", infiniteScroll);
 // wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 // wrapper.addEventListener("mouseleave", autoPlay);
-
 
 // document.querySelector(".hamburger").addEventListener("click", () => {
 //   document.querySelector(".navigation").classList.toggle("active");
