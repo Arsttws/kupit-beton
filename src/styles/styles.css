@@ -1350,18 +1350,27 @@ margin: 5px 0 0;
   z-index: 9;
   position: relative;
 }
-.blog .posts .item .content .date {
-  margin-bottom: 25px;
+.blog .posts .item .content .meta {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.blog .posts .item .content .date time {
+.blog .posts .item .content .meta div{
+  display: flex;
+  align-items: center;
+}
+.blog .posts .item .content .meta div time, .blog .posts .item .content .meta div p {
   color: #9a9a9a;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
-.blog .posts .item .content .date img {
-  width: 100%;
-  max-width: 14px;
+.blog .posts .item .content .meta div img {
+  height: 100%;
+  max-height: 24px;
   margin-right: 5px;
 }
 .blog .posts .item .content a {

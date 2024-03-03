@@ -210,3 +210,8 @@ color: var(--white);
         flex-direction: row;
     }
 }
+@media screen and (max-width: 480px) {
+    .blog .article .item .content .meta{
+        flex-direction: column;
+    }
+}
