@@ -38,7 +38,6 @@ function handleTouchMove(e) {
   let x2 = e.touches[0].clientX;
 
   let difference = x2 - x1;
-  console.log(difference);
 
   if (difference > 5) {
     i--;
@@ -48,8 +47,6 @@ function handleTouchMove(e) {
       i = 1;
     }
     videosContainer.style.left = -100 * (i - 1) + "%";
-    console.log(i);
-    // i++;
     bubles.forEach((buble) => {
       buble.classList.remove("active");
     });
@@ -61,8 +58,6 @@ function handleTouchMove(e) {
       i = 3;
     }
     videosContainer.style.left = -100 * (i - 1) + "%";
-    // i++;
-    console.log(i);
     bubles.forEach((buble) => {
       buble.classList.remove("active");
     });
