@@ -16,27 +16,27 @@ document.addEventListener('DOMContentLoaded', function () {
     if ($socialShare) {
       const url = encodeURIComponent(location.protocol + '//' + location.host + location.pathname);
       const shareData = [{
-          img: '<img src="../src/assets/vk.svg" alt="vk">',
+          img: '<img src="https://arsttws.github.io/kupit-beton/src/assets/vk.svg" alt="vk">',
           href: 'https://vk.com/share.php?url=' + url,
         },
         {
-          img: '<img src="../src/assets/okru.svg" alt="ok">',
+          img: '<img src="https://arsttws.github.io/kupit-beton/src/assets/okru.svg" alt="ok">',
           href: 'https://connect.ok.ru/offer?url=' + url,
         },
         {
-          img: '<img src="../src/assets/moymir.svg" alt="moymir">',
+          img: '<img src="https://arsttws.github.io/kupit-beton/src/assets/moymir.svg" alt="moymir">',
           href: 'https://connect.mail.ru/share?url=' + url,
         },
         {
-          img: '<img src="../src/assets/twitter.svg" alt="twitter">',
+          img: '<img src="https://arsttws.github.io/kupit-beton/src/assets/twitter.svg" alt="twitter">',
           href: 'https://twitter.com/intent/tweet?url=' + url,
         },
         {
-          img: '<img src="../src/assets/viber.svg" alt="viber">',
+          img: '<img src="https://arsttws.github.io/kupit-beton/src/assets/viber.svg" alt="viber">',
           href: 'viber://pa?chatURI=' + url,
         },
         {
-          img: '<img src="../src/assets/tg.svg" alt="tg">',
+          img: '<img src="https://arsttws.github.io/kupit-beton/src/assets/tg.svg" alt="tg">',
           href: 'https://t.me/share/url?url=' + url,
         }
       ];
