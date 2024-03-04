@@ -1548,14 +1548,13 @@ footer .share .items{
   flex-wrap: wrap;
   gap: 5px;
 }
-footer .share .items .item{
+/* footer .share .items .item{
   max-width: 36px;
-}
+} */
 footer .share .items a img{
   display: flex;
   border-radius: 10px;
-  width: 100%;
-  object-fit: cover;
+  width: 36px;
 }
 /* ==================== media-screen ====================== */
 @media screen and (max-width: 1600px) {
