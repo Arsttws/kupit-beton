@@ -182,7 +182,189 @@ h1::after, h2::after{
   margin-right: 0;
   margin-left: auto;
 }
+/* =========================== modal =========================== */
 
+.modal-window{
+  position: fixed;
+  z-index: 999999999;
+  background: var(--white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  max-width: 90%;
+  width: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 90%;
+}
+.modal-window.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-window .headline{
+  margin-bottom: 40px;
+}
+.modal-window .headline ul li{
+font-size: 16px;
+}
+.modal-window .headline h2{
+  text-align: left;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.modal-window .headline h2::after{
+  margin-left: 0;
+  margin-right: auto;
+}
+.modal-window .contact-info{
+  display: flex;
+  background: transparent;
+  border: none;
+  gap: 20px;
+}
+.modal-window .contact-info .item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.modal-window .contact-info .item label{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-gray);
+  font-family: 'Roboto', sans-serif;
+}
+.modal-window .contact-info .item .input{
+  display: flex;
+  flex-direction: row;
+}
+.modal-window .contact-info .item .input img{
+  width: 40px;
+  padding: 10px;
+  background: var(--dark-blue);
+  display: flex;
+  border-radius: 8px 0 0 8px;
+}
+.modal-window .contact-info .item .input input{
+  width: 100%;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #cecece;
+  display: flex;
+  border-radius: 0 8px 8px 0;
+}
+.modal-window .contact-info .item .input input:focus{
+  border: none;
+  outline: none;
+  box-shadow: 0 0 8px 3px #0000002a;
+}
+.modal-window .interested-in{
+  margin-top: 50px;
+}
+.modal-window .interested-in .heading{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.modal-window .interested-in .items{
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.modal-window .interested-in .items .item{
+  max-width: calc(100% / 3);
+  width: 100%;
+}
+.modal-window .interested-in .items .item p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+}
+.modal-window .interested-in .items .item .input{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+}
+.modal-window .message{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.modal-window .message label{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+}
+.modal-window .message textarea{
+  resize: vertical;
+  max-height: 300px;
+  min-height: 100px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #cecece;
+  display: flex;
+  border-radius: 8px;
+}
+.modal-window .message textarea:focus{
+  border: none;
+  outline: none;
+  box-shadow: 0 0 8px 3px #0000002a;
+}
+.modal-window .send{
+  margin-top: 20px;
+}
+.modal-window .send button{
+  padding: 14px;
+  width: 260px;
+  background: var(--yellow);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--white);
+  border: none;
+  transition: .2s;
+  cursor: pointer;
+}
+.modal-window .send button:hover{
+  background: #eb9310;
+  transform: scale(1.005);
+  font-size: 110%;
+  box-shadow:0 0 12px rgba(167, 167, 167, 0.493) ;
+}
+.overlay{
+  position: fixed;
+  z-index: 9999999;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #05182971;
+  pointer-events: none;
+}
+.overlay.active{
+  pointer-events: all;
+  opacity: 1;
+}
+.modal-window .cross{
+  margin-left: auto;
+  margin-right: 0;
+  padding: 6px 10px ;
+  display: flex;
+  align-items: center;
+  background: var(--dark-blue);
+  color: var(--white);
+  width: fit-content;
+  border-radius: 40px;
+  cursor: pointer;
+}
 /* =========================== @keyframes =========================== */
 
 @keyframes mainScreenImage {
@@ -2186,7 +2368,7 @@ footer .share .items a img{
   .bottom-menu .item:first-child{
     background: var(--light-blue-btn);
   }
-  .bottom-menu .item a{
+  .bottom-menu .item a, .bottom-menu .item button{
     margin: 0 auto;
     width: 100%;
     padding: 15.5px;
@@ -2194,6 +2376,10 @@ footer .share .items a img{
     color: var(--white);
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
   }
   .bottom-menu .item a img {
     width: 100%;

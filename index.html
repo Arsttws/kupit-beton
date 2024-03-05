@@ -172,6 +172,130 @@
         </div>
       </div>
     </header>
+    <div class="modal-window">
+      <div class="close-modal cross">&#x292C;</div>
+      <div class="headline">
+        <h2>Онлайн-запрос</h2>
+        <ul>
+          <li>
+            Укажите только свои контактные данные в форме ниже и мы обязательно с Вами свяжемся, чтобы ответить на интересующие Вас вопросы. Или заполните заявку полностью для подготовки детальной информации о продукции и услугах нашей компании.</li>
+        </ul>
+      </div>
+      <div class="content">
+        <form>
+          <fieldset class="contact-info">
+            <div class="item">
+              <label>Ваше имя</label>
+              <div class="input">
+                <img src="./src/assets/user.svg" alt="name">
+                <input type="text" name="name" placeholder="Имя" minlength="3" maxlength="20">
+              </div>
+            </div>
+            <div class="item">
+              <label>Ваш Номер телефона</label>
+              <div class="input">
+                <img src="./src/assets/phone.svg" alt="phone">
+                <input type="tel" name="phone" placeholder="+375 (29) 750-13-68" pattern="+[0-9]{13}" required>
+              </div>
+            </div>
+          </fieldset>
+          <div class="interested-in">
+            <p class="heading">Интересует:</p>
+            <fieldset class="items">
+              <div class="item">
+                <p>Бетон марок:</p>
+                <div class="input">
+                  <input type="checkbox" id="М100" name="М100">
+                  <label for="М100">М100</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М150" name="М150">
+                  <label for="М150">М150</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М200" name="М200">
+                  <label for="М200">М200</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М250" name="М250">
+                  <label for="М250">М250</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М300" name="М300">
+                  <label for="М300">М300</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М350" name="М350">
+                  <label for="М350">М350</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М400" name="М400">
+                  <label for="М400">М400</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М450" name="М450">
+                  <label for="М450">М450</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="М500" name="М500">
+                  <label for="М500">М500</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="crushedstone" name="crushedstone">
+                  <label for="crushedstone">Наполнитель "Щебень"</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="gravel" name="gravel">
+                  <label for="gravel">Наполнитель "Гравий"</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="help" name="help">
+                  <label for="help">Нужна консультация, не могу выбрать...</label>
+                </div>
+              </div>
+              <div class="item">
+                <p>Услуги:</p>
+                <div class="input">
+                  <input type="checkbox" id="production" name="production">
+                  <label for="production">Производство</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="shipment" name="shipment">
+                  <label for="shipment">Доставка</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="pouring" name="pouring">
+                  <label for="pouring">Заливка</label>
+                </div>
+              </div>
+              <div class="item">
+                <p>Спец. техника в аренду:</p>
+                <div class="input">
+                  <input type="checkbox" id="mixer" name="mixer">
+                  <label for="mixer">Миксер</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="pump-auto" name="pump-auto">
+                  <label for="pump-auto">Насос (Авто)</label>
+                </div>
+                <div class="input">
+                  <input type="checkbox" id="stationary" name="stationary">
+                  <label for="stationary">Насос (Снационарный)</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="message">
+            <label for="information">Прочая информация</label>
+            <textarea name="information" id="information" rows="10" placeholder="Любая важная информация, которую Вы решите нам сообщить..."></textarea>
+          </div>
+          <div class="send">
+            <button type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="overlay close-modal" id="overlay"></div>
     <main>
       <div class="slider-container">
         <div class="slider">
@@ -789,7 +913,7 @@
       <div class="bottom-menu active">
         <div class="item">
           <!-- <a href="tel:+375297501368"><img src="./src/assets/online-req.svg" alt="Онлайн-запрос"></a> -->
-          <a href="tel:+375297501368">Онлайн-запрос</a>
+          <button class="online-request">Онлайн-запрос</button>
         </div>
         <span></span>
         <div class="item">

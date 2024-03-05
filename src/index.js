@@ -40,3 +40,23 @@ function handleBottomMenu() {
  }
  prevScroll = currentScroll;
 }
+
+const modal = document.querySelector('.modal-window')
+const openModal = document.querySelectorAll('.online-request')
+const closeModal = document.querySelectorAll('.close-modal')
+const overlay = document.getElementById('overlay')
+
+openModal.forEach(button => {
+  button.addEventListener('click', () => {
+    modal.classList.add('active'),
+    overlay.classList.add('active')
+    document.body.style.overflowY = 'hidden'
+  })
+})
+closeModal.forEach(button => {
+  button.addEventListener('click', () => {
+    modal.classList.remove('active'),
+    overlay.classList.remove('active')
+    document.body.style.overflowY = 'auto'
+  })
+})
